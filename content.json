@@ -1,62 +1,71 @@
 {
-  "lastUpdated": "2026-09-14T09:22:38.011Z",
+  "lastUpdated": "2026-09-21T09:26:38.566Z",
   "a": [
     {
-      "source": "Creative Review",
-      "headline": "Will AI labels answer the concerns around using the tech in creativity?",
-      "summary": "This piece examines the growing push for AI disclosure labels on creative work, asking whether transparency alone can resolve deeper tensions around authenticity and authorship. A timely read for design students navigating how to position and communicate their use of generative tools in professional practice.",
-      "url": "https://www.creativereview.co.uk/will-ai-labels-answer-the-concerns-around-using-the-tech-in-creativity/",
-      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/09/shutterstock_2668435643.jpg",
-      "date": "11 Sept",
+      "source": "The Guardian AI",
+      "headline": "UK startup snares $20m to recreate gigs with hyper-realistic digital avatars",
+      "summary": "Unit1 has secured major investment to produce AI-powered digital versions of musicians for live concert experiences, positioning itself as a lower-cost alternative to shows like Abba Voyage. For motion and visual communication students, this raises urgent questions about synthetic performance, visual identity, and what constitutes authentic creative presence.",
+      "url": "https://www.theguardian.com/business/2026/sep/20/uk-startup-15m-investment-concerts-digital-versions-musicians",
+      "image": "https://i.guim.co.uk/img/media/af3ebb42e889135dd0ab4cd76f606d4bd8f86d33/232_0_1176_941/master/1176.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "20 Sept",
+      "status": "approved"
+    },
+    {
+      "source": "Creative Bloq",
+      "headline": "Affinity 3.3 shows that Canva is serious about taking on Adobe",
+      "summary": "The latest Affinity update signals that Canva is making a calculated push into professional design software territory, challenging Adobe's long-held dominance in the creative tools market. As a student, understanding this shifting software landscape matters for your future practice and the economic structures shaping which tools studios adopt.",
+      "url": "https://www.creativebloq.com/design/design-software/affinity-3-3-shows-that-canva-is-serious-about-taking-on-adobe",
+      "image": "https://cdn.mos.cms.futurecdn.net/gYstVjtvdqs2zKpkzxJevm-1920-80.jpg",
+      "date": "21 Sept",
       "status": "approved"
     }
   ],
   "b": [
     {
-      "source": "Wired",
-      "headline": "AI Agents Are Thirsty for Power",
-      "summary": "Wired reports on the shift from chatbot queries to agentic AI systems, which are dramatically more resource-intensive and are driving a new wave of data centre construction. For design students using these tools daily, this piece puts the infrastructure cost of AI-assisted workflows into sobering perspective.",
-      "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
-      "image": "https://media.wired.com/photos/6aa2cf4ca722d0b47513425c/master/pass/DataCenterColumn2.jpg",
-      "date": "13 Sept",
+      "source": "Grist",
+      "headline": "Former EPA officials: Trump is letting data centers make people sick",
+      "summary": "Former Environmental Protection Agency officials are warning that deregulation is allowing AI data centres to emit pollutants that directly harm communities living nearby, with health impacts being ignored in the race to build AI infrastructure. This piece connects the physical cost of your generative tools to real environmental injustice, a conversation every design student using AI platforms should be part of.",
+      "url": "https://grist.org/health/former-epa-officials-trump-is-letting-data-centers-make-people-sick/",
+      "image": "https://grist.org/wp-content/uploads/2026/08/carbon-emissions.jpg",
+      "date": "20 Sept",
       "status": "approved"
     },
     {
-      "source": "Design Week",
-      "headline": "No fonts on a dead planet: a website case study",
-      "summary": "A design team traces the surprising carbon footprint of web typography and digital assets, using a trivia question about emails versus car journeys as a launchpad for rethinking sustainable web design. Essential reading for students considering the environmental ethics of every design decision, not just AI use.",
-      "url": "https://www.designweek.co.uk/no-fonts-on-a-dead-planet/",
-      "image": "https://imagescdn.designweek.co.uk/uploads/2026/09/01.jpg?fit=crop&crop=faces&q=45&auto=compress,format&cs=origin&w=1024&h=682",
-      "date": "10 Sept",
+      "source": "Rest of World",
+      "headline": "South Africa joins the global resistance against American data centers",
+      "summary": "Civil rights organisations in South Africa are mounting coordinated protests against the expansion of US-owned AI data centres on the continent, raising questions about digital colonialism and resource extraction. This international perspective is vital for design students thinking about where AI infrastructure is built and who bears the environmental and social cost.",
+      "url": "https://restofworld.org/2026/south-africa-ai-data-center-protests/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+      "image": "https://restofworld.org/wp-content/uploads/2026/09/image00015-768x432.jpg",
+      "date": "17 Sept",
+      "status": "approved"
+    },
+    {
+      "source": "The Guardian AI",
+      "headline": "AI slowdown calls justified but collapse of bubble may be more immediate threat",
+      "summary": "Analysis from The Guardian examines the scale of debt being used to fund rapid data centre construction for AI, questioning whether the economic model underpinning generative AI tools is sustainable. For design students, understanding the fragile financial architecture behind the AI boom matters when evaluating which tools and platforms to build your practice around.",
+      "url": "https://www.theguardian.com/business/2026/sep/20/ai-slowdown-calls-collapse-of-bubble-datacentre-tech-firms",
+      "image": "https://i.guim.co.uk/img/media/b89c1804e73658b641f6a1b3d888f3260524675e/313_0_4311_3450/master/4311.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "20 Sept",
       "status": "approved"
     }
   ],
   "c": [
     {
-      "source": "It's Nice That",
-      "headline": "Why making the real thing still holds its magic: Isabel and Helen on a decade of putting impossible inventions into motion",
-      "summary": "Isabel and Helen reflect on ten years of physically constructing mechanical inventions that defy expectation, arguing that the tactile reality of making objects move is irreplaceable by digital simulation. Their Motion Sickness show at The Conran Shop for London Design Festival is a compelling statement about the continuing power of slow, hand-built practice.",
-      "url": "https://www.itsnicethat.com/features/isabel-and-helen-motion-sickness-art-spotlight-100926",
-      "image": "",
-      "date": "10 Sept",
+      "source": "Creative Boom",
+      "headline": "Ester Pazur on being a pessimist, the power of stop-motion and why handmade art still matters",
+      "summary": "After losing commissions directly to AI, stop-motion animator Ester Pazur began sharing her hand-drawn work online and found a growing community of practitioners who value slow, material-based making as a deliberate stance against automated image production. This is an honest and grounded account of what it means to keep a handmade practice alive in a market being reshaped by generative tools.",
+      "url": "https://www.creativeboom.com/work/ester-pazur-on-being-a-pessimist-the-power-of-stop-motion-and-why-handmade-art-still-matters/",
+      "image": "https://media.creativeboom.com/5ae1764b-5f28-4f94-b2c4-bcebfac38433/conversions/3934437652ac2152d1f6ef44359eae2d74487b24-medium.webp",
+      "date": "21 Sept",
       "status": "approved"
     },
     {
       "source": "It's Nice That",
-      "headline": "Good isn't good enough: beware the design middle ground",
-      "summary": "Aporva Baxi argues that design is becoming increasingly homogenised, pulled toward a safe centre by algorithmic feedback loops and risk-averse clients. This is a critical essay worth sitting with as a student: it diagnoses exactly the kind of aesthetic flattening that AI-generated work tends to accelerate.",
-      "url": "https://www.itsnicethat.com/articles/pov-good-isnt-good-enough-beware-the-design-middle-ground-creative-industry-070926",
+      "headline": "Marina Willer crafts letters with light and projection for BFI London Film Festival's new identity and campaign",
+      "summary": "Pentagram partner Marina Willer has built the new BFI London Film Festival identity around analogue light projection and physical letterforms, consciously choosing process-led craft in an era dominated by digital shortcuts. The work is a clear statement about slowness and materiality as design values, and a compelling counterpoint to the AI-generated visual branding flooding the industry.",
+      "url": "https://www.itsnicethat.com/articles/marina-willer-pentagram-bfi-london-film-festival-graphic-design-160926",
       "image": "",
-      "date": "7 Sept",
-      "status": "approved"
-    },
-    {
-      "source": "Print Magazine",
-      "headline": "The Daily Heller: Brad Holland's First Posthumous Exhibit and Panel",
-      "summary": "The School of Visual Arts marks its fall semester with a posthumous exhibition of Brad Holland, one of the most fiercely independent illustrators of the twentieth century and a lifelong opponent of surrendering creative authorship to commercial or technological forces. His legacy is a pointed counterpoint to the current moment of AI-generated imagery flooding editorial spaces.",
-      "url": "https://www.printmag.com/daily-heller/the-daily-heller-brad-hollands-first-posthumous-exhibit/",
-      "image": "https://i0.wp.com/www.printmag.com/wp-content/uploads/2026/09/IMG_9866.jpeg?resize=1000%2C768&quality=89&ssl=1",
-      "date": "11 Sept",
+      "date": "16 Sept",
       "status": "approved"
     }
   ]
