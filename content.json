@@ -1,116 +1,125 @@
 {
-  "lastUpdated": "2026-09-28T09:47:28.216Z",
+  "lastUpdated": "2026-10-05T10:44:13.600Z",
   "a": [
     {
-      "source": "Creative Boom",
-      "headline": "Beauty brands were writing slop before AI: here is how Uncommon won a D&AD Black Pencil for calling it out",
-      "summary": "Uncommon Creative Studio turned a collection of hollow marketing buzzwords into a periodic table parody, winning the top D&AD prize for craft and wit. The project is a sharp lesson in how conceptual rigour and painstaking execution can outperform AI-generated filler content.",
-      "url": "https://www.creativeboom.com/insight/beauty-brands-were-writing-ai-slop-before-ai-heres-how-uncommon-won-a-dad-black-pencil-for-calling-it-out/",
-      "image": "https://media.creativeboom.com/36b2fb7b-31b5-4e3f-9d8d-b99bfafa709e/conversions/04cf5b92df7912bbd3c38a9e3e6795597dba0498-medium.webp",
-      "date": "25 Sept",
+      "source": "Creative Bloq",
+      "headline": "Adobe's AI text-to-3D world concept is a glimpse of where Firefly could go next",
+      "summary": "Adobe has revealed a concept for text-to-3D world generation that hints at the next evolution of its Firefly AI toolset. For design students, this signals a future where spatial and environmental design workflows could be transformed by generative tools built directly into familiar Adobe software.",
+      "url": "https://www.creativebloq.com/design/graphic-design/adobes-ai-text-to-3d-world-concept-is-a-glimpse-of-where-firefly-could-go-next",
+      "image": "https://cdn.mos.cms.futurecdn.net/KCf9dWFqE4TDJMmRjfvos-1920-80.jpg",
+      "date": "4 Oct",
       "status": "approved"
     },
     {
-      "source": "Creative Bloq",
-      "headline": "We have the kind of stuff AI wishes it could make: Why trust is more important than ever for the NASA brand",
-      "summary": "NASA brand leadership argues that authentic visual heritage and earned institutional trust cannot be replicated by generative AI tools. For students thinking about branding and authenticity, this piece asks what human-authored design assets are actually worth in an AI-saturated market.",
-      "url": "https://www.creativebloq.com/design/we-have-the-kind-of-stuff-ai-wishes-it-could-make-why-trust-is-more-important-than-ever-for-the-nasa-brand",
-      "image": "https://cdn.mos.cms.futurecdn.net/7U2hdcGUCJhHVqMbZdHGg6-1920-80.jpg",
-      "date": "27 Sept",
+      "source": "Motionographer",
+      "headline": "AI Animation, IP and the Next Phase of Creative Production",
+      "summary": "Generative AI is moving fast from experimentation into professional animation pipelines, raising urgent questions about intellectual property and creative authorship for studios and agencies. If you are studying motion design, this is essential reading on how the industry is restructuring production roles and workflows around AI tools.",
+      "url": "https://motionographer.com/news/ai-animation-ip-and-the-next-phase-of-creative-production/",
+      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/10/ai-animation-ani.png?fit=700%2C394&quality=80&ssl=1",
+      "date": "1 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Motionographer",
+      "headline": "STUDIO STORIES: Tonic DNA, The Studio That Refused to Be One Thing",
+      "summary": "Montreal studio Tonic DNA has relaunched with a fresh identity and a bet that AI can enhance rather than replace hand-drawn animation, launching a new original holiday special alongside the rebrand. This is a candid case study in how an established creative studio is negotiating the integration of AI into a practice built on craft.",
+      "url": "https://motionographer.com/2026/09/29/the-studio-that-refused-to-be-one-thing/",
+      "image": "",
+      "date": "29 Sept",
       "status": "approved"
     },
     {
       "source": "Creative Review",
-      "headline": "Born Social on the power of creators in the AI age",
-      "summary": "Social-first agency Born Social argues that investing in human creativity is a competitive advantage as AI tools flood platforms with generic content. CCO Paddy Smith reflects on why authentic creator voices are increasingly the differentiator brands are paying for.",
-      "url": "https://www.creativereview.co.uk/born-social-creators-ai-age/",
-      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/09/Lovely-day-for-a-Guinness-crop.jpg",
-      "date": "24 Sept",
+      "headline": "Why innovation should be about showing, not telling",
+      "summary": "SpecialGuest creative director Aaron Duffy argues that the most compelling use of technology in creative work is demonstrating ideas through human and playful execution rather than simply describing capability. This is a timely perspective for design students navigating how to work with AI tools in ways that still feel authored and alive.",
+      "url": "https://www.creativereview.co.uk/why-innovation-should-be-about-showing-not-telling/",
+      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/SpecialGuest1.png",
+      "date": "5 Oct",
       "status": "approved"
     },
     {
-      "source": "Print Magazine",
-      "headline": "The Daily Heller: Typographically Speaking, What Comes Next?",
-      "summary": "The ITL Fonts and AI Conference is tackling how AI is reshaping type design and typographic practice at a moment of real industry anxiety. Type designer Nadine Chahine features in a conversation that every graphic design student thinking about the future of letterforms should follow.",
-      "url": "https://www.printmag.com/daily-heller/the-daily-heller-typographically-speaking-what-comes-next/",
-      "image": "https://i0.wp.com/www.printmag.com/wp-content/uploads/2026/09/Screen-Shot-2026-09-22-at-1.24.13-PM.png?resize=1000%2C332&quality=80&ssl=1",
-      "date": "23 Sept",
+      "source": "Design Week",
+      "headline": "The strongest motion identities encode behaviour, not aesthetics",
+      "summary": "This piece makes the case that motion branding must define systematic behavioural logic rather than relying on surface-level visual style, with AI-assisted tools increasingly deciding default animation behaviour when studios fail to set their own rules. For motion design students, this is a sharp argument for intentional, authored movement systems over aesthetic decoration.",
+      "url": "https://www.designweek.co.uk/the-strongest-motion-identities-encode-behaviour-not-aesthetics/",
+      "image": "https://d3faj0w6aqatyx.cloudfront.net/uploads/2026/09/W25_Web_Sabrina-0-00-08-13.jpg",
+      "date": "29 Sept",
       "status": "approved"
     }
   ],
   "b": [
     {
-      "source": "The Guardian Environment",
-      "headline": "People are standing up and fighting back: the north Devon revolt against a vast AI datacentre",
-      "summary": "Plans for one of Europe's largest AI campuses inside a UNESCO-designated biosphere reserve have triggered fierce local resistance in north Devon. The story puts a human and environmental face on the land and energy demands that underpin the generative AI tools designers use daily.",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/27/people-are-standing-up-and-fighting-back-north-devon-ai-datacentre",
-      "image": "https://i.guim.co.uk/img/media/8a4f1cd394453bebd70418a97b0002e2f260de96/688_0_6880_5504/master/6880.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "27 Sept",
+      "source": "The Guardian AI",
+      "headline": "Rural Queenslanders have seen gas projects come and go - but a 725-hectare datacentre poses a whole new level of stupidity",
+      "summary": "Residents of Dalby in Queensland are facing the prospect of a 31 billion dollar AI datacentre campus on their doorstep, raising serious questions about land use, energy demand and community consent in the AI infrastructure boom. This is a vivid on-the-ground account of how the appetite for AI compute translates into real environmental and social disruption at a local level.",
+      "url": "https://www.theguardian.com/australia-news/2026/oct/05/queensland-data-centre-anthropic-western-downs-dalby",
+      "image": "https://i.guim.co.uk/img/media/36cbbf9fb26744a29b5effde66856b52ce6a6d4b/537_0_3345_2677/master/3345.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "4 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Grist",
+      "headline": "To win over locals, data centers pump $340M into rural Texas projects",
+      "summary": "AI and tech companies are spending hundreds of millions of dollars on community projects in rural Texas to smooth local opposition to massive datacentre developments that bring enormous energy and water demands. This piece reveals the transactional logic behind AI infrastructure expansion and the scale of resource pressure these facilities place on small communities.",
+      "url": "https://grist.org/accountability/to-win-over-locals-data-centers-pump-340m-into-rural-texas-projects/",
+      "image": "https://grist.org/wp-content/uploads/2026/08/GettyImages-2276899078.jpg",
+      "date": "4 Oct",
       "status": "approved"
     },
     {
       "source": "Wired",
-      "headline": "The Data Center Backlash Should Also Be a Climate Reckoning. It Isn't Yet",
-      "summary": "Climate advocates are trying to attach environmental accountability to the growing public opposition against data centres, but the carbon and water costs of AI infrastructure remain underreported. This piece is a useful primer on why the tools powering generative design carry a hidden ecological price tag.",
-      "url": "https://www.wired.com/story/data-center-backlash-climate-reckoning/",
-      "image": "https://media.wired.com/photos/6ab67c97580ac2113d437689/master/pass/092526-Power%20Play.jpg",
-      "date": "27 Sept",
-      "status": "approved"
-    },
-    {
-      "source": "The Guardian AI",
-      "headline": "Democracy blindsides Silicon Valley power players looking to transform the world with AI",
-      "summary": "Communities across the US and Europe are pushing back against the siting of AI data centres, raising questions about who bears the local costs of global AI infrastructure. The piece connects the democratic deficit in AI expansion directly to the energy and land pressures that the industry rarely acknowledges.",
-      "url": "https://www.theguardian.com/technology/ng-interactive/2026/sep/27/democracy-ai-datacenters-power",
-      "image": "https://i.guim.co.uk/img/media/a73845d038c028e7ce80f3593fcc5023a3e9f17e/0_369_1638_1310/master/1638.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "27 Sept",
-      "status": "approved"
-    },
-    {
-      "source": "MIT Tech Review",
-      "headline": "AI is dominating the conversation at Climate Week",
-      "summary": "At New York Climate Week, AI's energy consumption emerged as a central flashpoint alongside the usual debates about fossil fuels and net zero targets. For design students, this is a reminder that every prompt submitted to a generative tool connects to a broader and contested energy economy.",
-      "url": "https://www.technologyreview.com/2026/09/24/1145048/ai-climate-week/",
-      "image": "",
-      "date": "24 Sept",
+      "headline": "Rural Data Centers Are in for a Big Federal Tax Break",
+      "summary": "The One Big Beautiful Bill Act could hand major federal tax benefits to hyperscale datacentre projects built in rural US areas, accelerating AI infrastructure buildout with public subsidy. For design students thinking about the systemic costs of generative tools, this is a sharp reminder that AI compute is being actively incentivised to grow at enormous scale.",
+      "url": "https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/",
+      "image": "https://media.wired.com/photos/6abfbb7863cea41649272752/master/pass/100226-Power%20Play.jpg",
+      "date": "4 Oct",
       "status": "approved"
     }
   ],
   "c": [
     {
       "source": "Creative Boom",
-      "headline": "Joseph Clark on why he is keeping AI out of Oh Studio, and the protest film that went viral saying so",
-      "summary": "Animation director Joseph Clark made a film called We Are Better Than This that went viral this summer, arguing that AI has nothing meaningful to offer his practice or his studio. This is a direct and personal account of building a creative business as an act of resistance against AI adoption in motion design.",
-      "url": "https://www.creativeboom.com/state-of-play/joseph-clark-on-why-hes-keeping-ai-out-of-oh-studio-and-the-protest-film-that-went-viral-saying-so/",
-      "image": "https://media.creativeboom.com/b71b6ae0-53ef-4a5f-b137-86ca515cd3cb/conversions/7d20b1fbf67668e2eb5b70309deec5641726b730-medium.webp",
-      "date": "28 Sept",
-      "status": "approved"
-    },
-    {
-      "source": "Creative Boom",
-      "headline": "Matthew Maldonado on why LAIKA made everything by hand for new film Wildwood",
-      "summary": "The stop-motion studio behind Coraline and Kubo and the Two Strings continues to build every puppet and set physically by hand, making a quiet but powerful case for analogue craft in an industry being reshaped by digital and AI production. Art director Matthew Maldonado explains why the slowness and difficulty of physical making is precisely the point.",
-      "url": "https://www.creativeboom.com/insight/wildwood-art-director-matthew-maldonado-on-why-laika-still-builds-everything-by-hand-and-why-theyre-coming-to-londons-design-musuem/",
-      "image": "https://media.creativeboom.com/5d531f28-6fb8-4dbb-9e4e-942d36651e96/conversions/35166b2ee4a6df2185696f43fc944abb9389af9b-medium.webp",
-      "date": "28 Sept",
-      "status": "approved"
-    },
-    {
-      "source": "The Guardian AI",
-      "headline": "British celebrities beat AI companies lobbying to get free use of their work. They have a warning for Australia",
-      "summary": "A coalition of UK artists and creatives successfully pushed back against attempts by AI companies to train on their work without consent or compensation, and they are now urging other countries to follow. This is a critical story for design students to understand in terms of copyright, labour and the political fight over who owns creative output.",
-      "url": "https://www.theguardian.com/australia-news/2026/sep/28/uk-celebrity-warning-for-australia-ai-copyright",
-      "image": "https://i.guim.co.uk/img/media/58a73993f9cb3247c75bb13c80e2fdeb39c1ee15/88_0_2500_2000/master/2500.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "27 Sept",
+      "headline": "Fjallraven bets on the handmade with giant stitched banners by Miscellaneous Adventures",
+      "summary": "Outdoor brand Fjallraven commissioned Lake District makers Emma and Andrew Groves to hand-sew enormous fabric banners for a major campaign, explicitly choosing slow, human craft over digital production. This is a compelling example of a major brand using analogue handmaking as a direct counterstatement to AI-generated visual content.",
+      "url": "https://www.creativeboom.com/work/behold-these-giant-fabric-banners-that-prove-brands-as-big-as-fjallraven-are-betting-on-human-made/",
+      "image": "https://media.creativeboom.com/6d7849d8-2aa3-4bd0-8322-46b08b9efc76/conversions/07b52d8420b79bac3724f578647f2199cd5563fd-medium.webp",
+      "date": "5 Oct",
       "status": "approved"
     },
     {
       "source": "Motionographer",
-      "headline": "Who Moved My Work? Tim Thompson on RevThink's The Weekly Briefing",
-      "summary": "Industry consultant Tim Thompson challenges motion designers to think critically about the long-term structural shifts AI and client self-sufficiency are causing in the value of creative work. Rather than panic, he argues for a clear-eyed reassessment of what skilled practitioners actually offer that automation cannot replace.",
-      "url": "https://motionographer.com/news/who-moved-my-work-tim-thompson-on-revthinks-the-weekly-briefing/",
-      "image": "https://s35726.pcdn.co/wp-content/uploads/2026/09/rim-revthink-700x248.png",
-      "date": "23 Sept",
+      "headline": "Busy Bodies brings hand-drawn printmaking to Vimeo",
+      "summary": "Kate Renshaw-Lewis built her animated short Busy Bodies entirely through screen printing and inkjet printing combined with hand-drawn 2D animation, deliberately rooting the work in physical mark-making and independent production. At a moment when AI animation tools are accelerating, this film is a quiet but pointed commitment to labour-intensive, materially grounded practice.",
+      "url": "https://motionographer.com/news/busy-bodies-hand-drawn-printmaking-vimeo/",
+      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/10/BusyBodies_02.jpg?fit=700%2C525&quality=89&ssl=1",
+      "date": "2 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Creative Boom",
+      "headline": "Ellie Campbell turns club nights into hand-painted, gloriously wonky animations",
+      "summary": "Ellie Campbell makes painstakingly hand-painted animations documenting underground club culture, embracing imperfection and physical process as central to the work rather than as a limitation. Her practice is an energetic argument for the value of human irregularity and slowness in an animation landscape increasingly shaped by generative smoothness.",
+      "url": "https://www.creativeboom.com/work/ellie-campbell-turns-club-nights-into-hand-painted-gloriously-wonky-animations/",
+      "image": "https://media.creativeboom.com/0b4a44fe-dc01-4038-a4fa-0aaffcd2321b/conversions/c409e78d19dd4f62d08c519a75ba196d6c159e3f-medium.webp",
+      "date": "1 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Creative Review",
+      "headline": "A new book explores how type became a tool of rebellion",
+      "summary": "Graphic designer and writer Theo Inglis has produced a new book examining the history of protest typography, tracing how letterforms have been weaponised by social and political movements over decades. For design students, this is a timely reminder that visual communication has always carried critical power, and that human-made type carries political history that generated aesthetics cannot replicate.",
+      "url": "https://www.creativereview.co.uk/the-typography-of-protest-revolution-and-rebellion-in-protest-art-book-theo-inglis/",
+      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/Amterdam-protest-1980.jpg",
+      "date": "5 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Motionographer",
+      "headline": "Solo-Made Short Machines Learning Premieres at October Film Festivals",
+      "summary": "Brooklyn filmmaker Anthony Koithra has made a debut animated short called Machines Learning that engages directly with AI as its subject, premiering across multiple independent film festivals this October. Made solo and screened outside commercial distribution, the film positions itself as an independent critical voice on AI at a moment when the industry is racing to absorb generative tools.",
+      "url": "https://motionographer.com/news/machines-learning-october-2026-film-festivals/",
+      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/10/MachinesLearning_PromoStills_01_HD_Landscape.png?fit=700%2C394&quality=80&ssl=1",
+      "date": "1 Oct",
       "status": "approved"
     }
   ]
