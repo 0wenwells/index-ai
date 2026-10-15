@@ -4,387 +4,373 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>index.ai</title>
+
+<!-- FONT
+     Aktiv Grotesk via Adobe Fonts: paste your web project <link> here, e.g.
+     <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css">
+     Until then, Inter (below) is used as the stand-in. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;1,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 
+<style>
 /* ============================================================
-   index.ai — Student Page
-   ============================================================
-   Layout: narrow meta gutter left, three equal content columns right.
-   Gelasio for headlines; Instrument Sans for everything else.
+   index.ai — Redesign V1 (built from Redesign_V1.idml)
+   ------------------------------------------------------------
+   Grid     36 | 141 | 329 | 329 | 329 | 36   (1200 max)
+   Rules    0.25pt black hairlines on every column edge
+   Type     Golden-ratio scale from 12: 8 / 11 / 12 / 19.5
+   Unit     Every news story is a block, added to its column.
+   Weeks    Each week is a horizontal band. Scrolling past the
+            end of a band flicks the date + count to the next.
    ============================================================ */
 
 :root {
-  --bg:           #fafafa;
-  --fg:           #0a0a0a;
-  --mid:          #787878;
-  --rule:         #e2e2e2;
-  --serif:        'Gelasio', Georgia, serif;
-  --sans:         'Instrument Sans', system-ui, sans-serif;
-  --gutter:       140px;
-  --col-gap:      32px;
-  --max-width:    1200px;
-  --page-pad:     28px;
+  /* Colour */
+  --bg:        #fafafa;
+  --fg:        #0a0a0a;
+  --mid:       #808080;   /* 50% tint of black */
+  --line:      0.5px solid var(--fg);
+
+  /* Type */
+  --sans:      'aktiv-grotesk', 'Aktiv Grotesk', 'Inter', system-ui, sans-serif;
+  --t-xs:      8px;       /* source, summary   — 8 / 12     */
+  --t-s:       11px;      /* tagline, date, count — 11 / 14.4 */
+  --t-m:       12px;      /* title, column heads — 12 / 12 */
+  --t-l:       19.5px;    /* headline          — 19.5 / 23.4 */
+
+  /* Grid */
+  --margin:    36px;
+  --meta:      141px;
+  --inset:     12px;      /* text indent from column rule */
+  --inset-r:   36px;      /* right indent on small text */
+  --unit:      12px;      /* vertical rhythm */
+  --max:       1200px;
 }
 
-/* Single-theme: always light — deliberate identity */
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--sans);
+  font-weight: 400;
   background: var(--bg);
   color: var(--fg);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: var(--t-m);
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; }
-a:hover { opacity: 0.65; }
+a { color: inherit; text-decoration: none; }
 
 .page {
-  max-width: var(--max-width);
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 0 var(--page-pad);
+  padding: 0 var(--margin);
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--meta) repeat(3, 1fr);
+}
+
+/* Every cell carries a left rule; the last one closes the right edge */
+.cells > * { border-left: var(--line); }
+.cells > :last-child { border-right: var(--line); }
 
 /* ============================================================
-   MASTHEAD
-   Same four-column grid as the content: gutter | title (cols 2–3) | meta (col 4)
+   FIXED TOP — masthead + column heads stay put
    ============================================================ */
 
-.masthead {
-  display: grid;
-  grid-template-columns: var(--gutter) 1fr 1fr 1fr;
-  gap: var(--col-gap);
-  padding: 32px 0 24px;
-  border-bottom: 1px solid var(--fg);
-  align-items: end;
-}
-
-.masthead-title {
-  grid-column: 2 / 4;
-}
-
-.masthead-title h1 {
-  font-family: var(--serif);
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.masthead-title h1 em { font-style: italic; }
-
-.masthead-title .tagline {
-  margin-top: 8px;
-  font-size: 11px;
-  color: var(--mid);
-}
-
-.masthead-meta {
-  grid-column: 4;
-  font-size: 11px;
-  color: var(--mid);
-  line-height: 1.7;
-  text-align: right;
-}
-
-/* ============================================================
-   STRAND HEADER ROW
-   ============================================================ */
-
-.strand-row {
-  display: grid;
-  grid-template-columns: var(--gutter) 1fr 1fr 1fr;
-  gap: var(--col-gap);
-  padding: 12px 0 0;
+.top {
   position: sticky;
   top: 0;
-  background: var(--bg);
   z-index: 10;
+  background: var(--bg);
 }
 
-.strand-label {
-  font-size: 10px;
-  font-weight: 400;
-  color: var(--mid);
-  letter-spacing: 0.06em;
+.masthead {
+  height: 113px;
+  padding-top: var(--margin);
+  border-bottom: var(--line);
+}
+
+.title {
+  padding-left: var(--inset);
+  font-size: var(--t-m);
+  line-height: 12px;
   text-transform: uppercase;
 }
 
-/* Labels sit over the column content, so match the column's left padding */
-.strand-row .strand-label {
-  padding-left: var(--col-gap);
+.tagline {
+  grid-column: 2 / 4;
+  padding-left: var(--inset);
+  font-size: var(--t-s);
+  line-height: 14.4px;
+  color: var(--mid);
+}
+
+.heads {
+  height: 35px;
+  border-bottom: var(--line);
+}
+
+.heads > div {
+  padding: 7px var(--inset) 0;
+  font-size: var(--t-m);
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.heads .date {
+  font-size: var(--t-s);
+  line-height: 14.4px;
+  color: var(--mid);
+  text-transform: none;
 }
 
 /* ============================================================
-   CONTENT ROW
-   One vertical rule before each content column — none on the meta column
+   WEEK BANDS
    ============================================================ */
 
-.content-row {
-  display: grid;
-  grid-template-columns: var(--gutter) 1fr 1fr 1fr;
-  gap: var(--col-gap);
-  border-bottom: 1px solid var(--fg);
-}
+.week { border-bottom: var(--line); }
 
-.meta-col {
-  padding: 16px 0 32px;
-}
-
-.meta-week {
-  font-size: 10px;
+.meta .count {
+  position: sticky;
+  top: var(--head, 148px);
+  padding: 7px var(--inset) var(--unit);
+  font-size: var(--t-s);
+  line-height: 14.4px;
   color: var(--mid);
-  line-height: 1.8;
+  text-transform: uppercase;
 }
 
-.meta-count {
-  margin-top: 16px;
-  font-family: var(--serif);
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.meta-count-label {
-  font-size: 10px;
-  color: var(--mid);
-  margin-top: 2px;
-}
-
-.strand-col {
-  padding: 16px 0 32px var(--col-gap);
-  border-left: 0.5px solid var(--rule);
-}
+.strand-label { display: none; }  /* mobile only */
 
 /* ============================================================
-   ITEMS
+   BLOCK — one news story
    ============================================================ */
 
-.item {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 0.5px solid var(--rule);
+.block {
+  padding: var(--unit) 0 calc(var(--unit) * 2);
+  border-bottom: var(--line);
 }
 
-.item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+/* The week rule closes each band, so the last block needs no rule of its own */
+.strand > .block:last-child { border-bottom: none; }
 
-.item-image {
-  width: 100%;
-  margin-bottom: 10px;
+.block-image {
+  margin: 0 var(--inset) var(--unit);
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  background: var(--rule);
-  aspect-ratio: 16 / 9;
+  background: #e8e8e8;
 }
 
-.item-image img {
+.block-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.item-source {
-  font-size: 10px;
+.source,
+.summary {
+  padding: 0 var(--inset-r) 0 var(--inset);
+  font-size: var(--t-xs);
+  line-height: 12px;
   color: var(--mid);
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
 }
 
-.item-date {
-  font-size: 10px;
-  color: var(--rule);
-}
-
-.item-headline {
-  font-family: var(--serif);
-  font-size: 16px;
+.headline {
+  padding: 0 var(--inset);
+  font-size: var(--t-l);
   font-weight: 400;
-  line-height: 1.3;
-  margin-bottom: 6px;
+  line-height: 23.4px;
+  margin-bottom: var(--unit);
 }
 
-.item-headline a { text-decoration: none; }
-.item-headline a:hover {
+.headline a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  opacity: 1;
-}
-
-.item-summary {
-  font-size: 12px;
-  color: var(--mid);
-  line-height: 1.6;
 }
 
 .state-msg {
-  font-size: 11px;
+  padding: var(--unit) var(--inset);
+  font-size: var(--t-s);
+  line-height: 14.4px;
   color: var(--mid);
-  padding: 24px 0;
 }
 
 /* ============================================================
-   FOOTER
-   ============================================================ */
-
-.site-footer {
-  display: grid;
-  grid-template-columns: var(--gutter) 1fr;
-  gap: var(--col-gap);
-  padding: 12px 0 28px;
-}
-
-.footer-note {
-  font-size: 10px;
-  color: var(--mid);
-  letter-spacing: 0.03em;
-}
-
-/* ============================================================
-   RESPONSIVE
+   MOBILE — single column, strands stacked inside each week
    ============================================================ */
 
 @media (max-width: 860px) {
-  :root { --page-pad: 16px; }
+  :root { --margin: 16px; }
 
-  .masthead        { grid-template-columns: 1fr; gap: 12px; }
-  .masthead-title,
-  .masthead-meta   { grid-column: 1; text-align: left; }
+  .grid            { grid-template-columns: 1fr; }
+  .cells > *       { border-left: none; border-right: none; }
 
-  .strand-row      { display: none; }
+  .masthead        { height: auto; padding: 20px 0 12px; }
+  .title,
+  .tagline         { padding-left: 0; }
+  .tagline         { grid-column: 1; margin-top: 8px; }
 
-  .content-row     { grid-template-columns: 1fr; border-bottom: none; }
-  .meta-col        { display: none; }
+  .heads           { height: auto; padding: 7px 0; }
+  .heads > div     { padding: 0; }
+  .heads .strand-head { display: none; }
 
-  .strand-col      { border-left: none; padding-left: 0; border-top: 1px solid var(--fg); }
-  .meta-col + .strand-col { border-top: none; }
+  .meta .count     { position: static; padding: 7px 0; border-bottom: var(--line); }
 
-  .site-footer     { grid-template-columns: 1fr; }
-  .site-footer > :first-child { display: none; }
+  .strand-label    { display: block; padding: 14px 0 0; font-size: var(--t-m); line-height: 12px; text-transform: uppercase; }
+
+  .block-image,
+  .source,
+  .summary,
+  .headline        { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+  .source, .summary { font-size: 11px; line-height: 14.4px; }
 }
-
 </style>
 </head>
 <body>
 <div class="page">
 
-  <header class="masthead">
-    <div class="masthead-title">
-      <h1>index<em>.ai</em></h1>
-      <p class="tagline">A weekly index of AI and the creative industries</p>
+  <header class="top">
+    <div class="masthead grid">
+      <h1 class="title">index.ai</h1>
+      <p class="tagline">A weekly index of AI and the creative industries<br>Curated for BA Graphic &amp; Media Design</p>
     </div>
-    <div class="masthead-meta">
-      Updated weekly<br>Curated for BA Graphic &amp; Media Design
+    <div class="heads grid cells">
+      <div class="date" id="current-date">—</div>
+      <div class="strand-head">The Creative Industry &amp; AI</div>
+      <div class="strand-head">The Environmental Impact of AI</div>
+      <div class="strand-head">The Creative Response to AI</div>
     </div>
   </header>
 
-  <main>
-    <div class="strand-row">
-      <div></div>
-      <div class="strand-label">AI &amp; Creative Industry</div>
-      <div class="strand-label">Environmental Cost</div>
-      <div class="strand-label">Creative Opposition</div>
-    </div>
-
-    <div class="content-row">
-      <div class="meta-col">
-        <div class="meta-week" id="meta-week">—</div>
-        <div class="meta-count" id="meta-count">—</div>
-        <div class="meta-count-label">items</div>
-      </div>
-
-      <div class="strand-col">
-        <div id="list-a"></div>
-      </div>
-      <div class="strand-col">
-        <div id="list-b"></div>
-      </div>
-      <div class="strand-col">
-        <div id="list-c"></div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div></div>
-    <div>
-      <span class="footer-note" id="last-updated"></span>
-    </div>
-  </footer>
+  <main id="weeks"></main>
 
 </div>
 <script>
-const CONTENT_URL = './content.json';
+/* ============================================================
+   DATA
+   content.json  — the current week (unchanged format):
+                   { lastUpdated, weekOf?, a:[], b:[], c:[] }
+   archive.json  — optional, past weeks, newest first:
+                   [ { weekOf, a:[], b:[], c:[] }, ... ]
+   ============================================================ */
 
-async function loadContent() {
+const CONTENT_URL = './content.json';
+const ARCHIVE_URL = './archive.json';
+const STRANDS = [
+  ['a', 'The Creative Industry & AI'],
+  ['b', 'The Environmental Impact of AI'],
+  ['c', 'The Creative Response to AI']
+];
+
+async function getJSON(url) {
   try {
-    const res = await fetch(CONTENT_URL + '?t=' + Date.now());
-    if (!res.ok) throw new Error();
-    render(await res.json());
-  } catch {
-    ['a','b','c'].forEach(s =>
-      document.getElementById('list-' + s).innerHTML =
-        '<p class="state-msg">Content unavailable — check back soon.</p>'
-    );
-  }
+    const res = await fetch(url + '?t=' + Date.now());
+    return res.ok ? await res.json() : null;
+  } catch { return null; }
 }
 
-function render(data) {
-  const now = new Date();
-  const weekStr = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-
-  document.getElementById('meta-week').textContent = 'Week of ' + weekStr;
-
-  const all = [...(data.a||[]), ...(data.b||[]), ...(data.c||[])];
-  document.getElementById('meta-count').textContent =
-    all.filter(i => i.status === 'approved').length;
-
-  if (data.lastUpdated) {
-    const d = new Date(data.lastUpdated);
-    document.getElementById('last-updated').textContent =
-      'Last updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+async function load() {
+  const [current, archive] = await Promise.all([getJSON(CONTENT_URL), getJSON(ARCHIVE_URL)]);
+  const weeks = [];
+  if (current) {
+    if (Array.isArray(current.weeks)) weeks.push(...current.weeks);
+    else weeks.push({ weekOf: current.weekOf || current.lastUpdated, a: current.a, b: current.b, c: current.c });
   }
+  if (Array.isArray(archive)) weeks.push(...archive);
 
-  ['a','b','c'].forEach(strand => {
-    const items = (data[strand]||[]).filter(i => i.status === 'approved');
-    const list  = document.getElementById('list-' + strand);
-    if (!items.length) {
-      list.innerHTML = '<p class="state-msg">No items this week yet.</p>';
-      return;
-    }
-    list.innerHTML = items.map(item => `
-      <article class="item">
-        ${item.image ? `<div class="item-image"><img src="${esc(item.image)}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>` : ''}
-        <div class="item-source">
-          <span>${esc(item.source)}</span>
-          <span class="item-date">${esc(item.date)}</span>
-        </div>
-        <h2 class="item-headline">${item.url
-          ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.headline)}</a>`
-          : esc(item.headline)}</h2>
-        <p class="item-summary">${esc(item.summary)}</p>
-      </article>`).join('');
-  });
+  const main = document.getElementById('weeks');
+  if (!weeks.length) {
+    main.innerHTML = '<p class="state-msg">Content unavailable — check back soon.</p>';
+    return;
+  }
+  main.innerHTML = weeks.map(renderWeek).join('');
+  setupWeekTracking();
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+
+function approved(list) { return (list || []).filter(i => i.status === 'approved'); }
+
+function renderWeek(week) {
+  const count = STRANDS.reduce((n, [k]) => n + approved(week[k]).length, 0);
+  const date  = formatDate(week.weekOf);
+  return `
+    <section class="week grid cells" data-date="${esc(date)}">
+      <div class="meta"><div class="count">${count} ${count === 1 ? 'item' : 'items'}</div></div>
+      ${STRANDS.map(([k, label]) => `
+        <div class="strand">
+          <div class="strand-label">${esc(label)}</div>
+          ${approved(week[k]).map(renderBlock).join('') || '<p class="state-msg">No items this week.</p>'}
+        </div>`).join('')}
+    </section>`;
+}
+
+function renderBlock(item) {
+  const img = item.image
+    ? `<div class="block-image"><img src="${esc(item.image)}" alt="" loading="lazy" onerror="this.parentElement.remove()"></div>`
+    : '';
+  const headline = item.url
+    ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.headline)}</a>`
+    : esc(item.headline);
+  return `
+    <article class="block">
+      ${img}
+      <p class="source">${esc(item.source)}</p>
+      <h2 class="headline">${headline}</h2>
+      <p class="summary">${esc(item.summary)}</p>
+    </article>`;
+}
+
+/* DD.MM.YYYY */
+function formatDate(value) {
+  const d = value ? new Date(value) : null;
+  if (!d || isNaN(d)) return '';
+  const p = n => String(n).padStart(2, '0');
+  return `${p(d.getDate())}.${p(d.getMonth() + 1)}.${d.getFullYear()}`;
 }
 
 function esc(s) {
-  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-loadContent();
+/* ============================================================
+   WEEK TRACKING — the date in the fixed header flicks to
+   whichever week band is currently under it
+   ============================================================ */
+
+function setupWeekTracking() {
+  const top   = document.querySelector('.top');
+  const weeks = [...document.querySelectorAll('.week')];
+  const label = document.getElementById('current-date');
+  let ticking = false;
+
+  function update() {
+    const h = top.offsetHeight;
+    document.documentElement.style.setProperty('--head', h + 'px');
+    let active = weeks[0];
+    for (const w of weeks) {
+      if (w.getBoundingClientRect().top <= h + 1) active = w;
+      else break;
+    }
+    if (active && label.textContent !== active.dataset.date) label.textContent = active.dataset.date;
+    ticking = false;
+  }
+
+  const request = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  window.addEventListener('scroll', request, { passive: true });
+  window.addEventListener('resize', request);
+  update();
+}
+
+load();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "29641b07d62c4ca2a201c1e0e99d1c67"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
