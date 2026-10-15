@@ -87,7 +87,6 @@ a { color: inherit; text-decoration: none; }
 .masthead {
   height: 113px;
   padding-top: var(--margin);
-  border-bottom: var(--line);
 }
 
 .title {
@@ -119,12 +118,10 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 
-.heads .date {
-  font-size: var(--t-s);
-  line-height: 14.4px;
-  color: var(--mid);
-  text-transform: none;
-}
+/* Top-left cell is left open: no left or top rule.
+   The three column heads carry their own top rule. */
+.heads > :first-child { border-left: none; }
+.heads > :not(:first-child) { border-top: var(--line); }
 
 /* ============================================================
    WEEK BANDS
@@ -132,13 +129,19 @@ a { color: inherit; text-decoration: none; }
 
 .week { border-bottom: var(--line); }
 
-.meta .count {
+/* Date + count stick under the header for the length of their week,
+   then the next week's pair pushes up and replaces them */
+.meta-inner {
   position: sticky;
   top: var(--head, 148px);
-  padding: 7px var(--inset) var(--unit);
+  padding: var(--unit) var(--inset);
   font-size: var(--t-s);
   line-height: 14.4px;
   color: var(--mid);
+}
+
+.meta .count {
+  margin-top: var(--unit);
   text-transform: uppercase;
 }
 
@@ -217,11 +220,11 @@ a { color: inherit; text-decoration: none; }
   .tagline         { padding-left: 0; }
   .tagline         { grid-column: 1; margin-top: 8px; }
 
-  .heads           { height: auto; padding: 7px 0; }
-  .heads > div     { padding: 0; }
-  .heads .strand-head { display: none; }
+  .masthead        { border-bottom: var(--line); }
+  .heads           { display: none; }
 
-  .meta .count     { position: static; padding: 7px 0; border-bottom: var(--line); }
+  .meta-inner      { position: static; display: flex; justify-content: space-between; padding: 7px 0; border-bottom: var(--line); }
+  .meta .count     { margin-top: 0; }
 
   .strand-label    { display: block; padding: 14px 0 0; font-size: var(--t-m); line-height: 12px; text-transform: uppercase; }
 
@@ -239,10 +242,10 @@ a { color: inherit; text-decoration: none; }
   <header class="top">
     <div class="masthead grid">
       <h1 class="title">index.ai</h1>
-      <p class="tagline">A weekly index of AI news.<br>Curated for BA Graphic &amp; Media Design.</p>
+      <p class="tagline">A weekly index of AI and the creative industries<br>Curated for BA Graphic &amp; Media Design</p>
     </div>
     <div class="heads grid cells">
-      <div class="date" id="current-date">—</div>
+      <div></div>
       <div class="strand-head">The Creative Industry &amp; AI</div>
       <div class="strand-head">The Environmental Impact of AI</div>
       <div class="strand-head">The Creative Response to AI</div>
@@ -304,8 +307,13 @@ function renderWeek(week) {
   const count = STRANDS.reduce((n, [k]) => n + approved(week[k]).length, 0);
   const date  = formatDate(week.weekOf);
   return `
-    <section class="week grid cells" data-date="${esc(date)}">
-      <div class="meta"><div class="count">${count} ${count === 1 ? 'item' : 'items'}</div></div>
+    <section class="week grid cells">
+      <div class="meta">
+        <div class="meta-inner">
+          <div class="date">${esc(date)}</div>
+          <div class="count">${count} ${count === 1 ? 'item' : 'items'}</div>
+        </div>
+      </div>
       ${STRANDS.map(([k, label]) => `
         <div class="strand">
           <div class="strand-label">${esc(label)}</div>
@@ -343,32 +351,15 @@ function esc(s) {
 }
 
 /* ============================================================
-   WEEK TRACKING — the date in the fixed header flicks to
-   whichever week band is currently under it
+   HEADER HEIGHT — keeps each week's date + count sticking
+   directly under the fixed header
    ============================================================ */
 
 function setupWeekTracking() {
-  const top   = document.querySelector('.top');
-  const weeks = [...document.querySelectorAll('.week')];
-  const label = document.getElementById('current-date');
-  let ticking = false;
-
-  function update() {
-    const h = top.offsetHeight;
-    document.documentElement.style.setProperty('--head', h + 'px');
-    let active = weeks[0];
-    for (const w of weeks) {
-      if (w.getBoundingClientRect().top <= h + 1) active = w;
-      else break;
-    }
-    if (active && label.textContent !== active.dataset.date) label.textContent = active.dataset.date;
-    ticking = false;
-  }
-
-  const request = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
-  window.addEventListener('scroll', request, { passive: true });
-  window.addEventListener('resize', request);
-  update();
+  const top = document.querySelector('.top');
+  const set = () => document.documentElement.style.setProperty('--head', top.offsetHeight + 'px');
+  window.addEventListener('resize', set);
+  set();
 }
 
 load();
