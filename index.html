@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://use.typekit.net/onp4cuh.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>index.ai</title>
@@ -11,14 +10,16 @@
 
 <style>
 /* ============================================================
-   index.ai — Redesign V1 (built from Redesign_V1.idml)
+   index.ai — Redesign V1 + archive
    ------------------------------------------------------------
    Grid     36 | 141 | 329 | 329 | 329 | 36   (1200 max)
-   Rules    0.25pt black hairlines on every column edge
+   Rules    hairlines on every column edge
    Type     Golden-ratio scale from 12: 8 / 11 / 12 / 19.5
    Unit     Every news story is a block, added to its column.
-   Weeks    Each week is a horizontal band. Scrolling past the
-            end of a band flicks the date + count to the next.
+   Weeks    Each week is a horizontal band.
+   Archive  Left column lists every week. Selecting one scrolls
+            to it; the top-left label rolls to show the week
+            in view.
    ============================================================ */
 
 :root {
@@ -27,24 +28,33 @@
   --fg:        #0a0a0a;
   --mid:       #808080;   /* 50% tint of black */
   --line:      0.5px solid var(--fg);
+  --line-soft: 0.5px solid var(--mid);
 
   /* Type */
   --sans:      'aktiv-grotesk', system-ui, sans-serif;
-  --t-xs:      8px;       /* source, summary   — 8 / 12     */
-  --t-s:       11px;      /* tagline, date, count — 11 / 14.4 */
-  --t-m:       12px;      /* title, column heads — 12 / 12 */
-  --t-l:       19.5px;    /* headline          — 19.5 / 23.4 */
+  --t-xs:      8px;       /* source, summary      — 8 / 12      */
+  --t-s:       11px;      /* tagline              — 11 / 14.4   */
+  --t-m:       12px;      /* title, heads, archive — 12 / 12    */
+  --t-l:       19.5px;    /* headline             — 19.5 / 23.4 */
 
   /* Grid */
   --margin:    36px;
   --meta:      141px;
+  --row:       35px;      /* header row + archive rows */
   --inset:     12px;      /* text indent from column rule */
   --inset-r:   36px;      /* right indent on small text */
   --unit:      12px;      /* vertical rhythm */
   --max:       1200px;
+
+  /* Motion */
+  --dur-1:     120ms;     /* hover */
+  --dur-2:     360ms;     /* label roll */
+  --ease-move: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--sans);
@@ -64,17 +74,15 @@ a { color: inherit; text-decoration: none; }
   padding: 0 var(--margin);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: var(--meta) repeat(3, 1fr);
-}
+.grid  { display: grid; grid-template-columns: var(--meta) repeat(3, 1fr); }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); }
 
 /* Every cell carries a left rule; the last one closes the right edge */
 .cells > * { border-left: var(--line); }
 .cells > :last-child { border-right: var(--line); }
 
 /* ============================================================
-   FIXED TOP — masthead + column heads stay put
+   FIXED TOP — masthead + header row stay put
    ============================================================ */
 
 .top {
@@ -105,46 +113,86 @@ a { color: inherit; text-decoration: none; }
 }
 
 .heads {
-  height: 35px;
+  height: var(--row);
+  border-top: var(--line);
   border-bottom: var(--line);
 }
 
 .heads > div {
   display: flex;
-  align-items: center;      /* vertically centred in the 35px row */
+  align-items: center;
   padding: 0 var(--inset);
   font-size: var(--t-m);
   line-height: 12px;
   text-transform: uppercase;
 }
 
-/* Top-left cell is left open: no left or top rule.
-   The three column heads carry their own top rule. */
-.heads > :first-child { border-left: none; }
-.heads > :not(:first-child) { border-top: var(--line); }
-
 /* ============================================================
-   WEEK BANDS
+   WEEK LABEL — top-left cell. Text rolls vertically when the
+   week in view changes: down the archive = rolls up, back up
+   the archive = rolls down.
    ============================================================ */
 
-.week { border-bottom: var(--line); }
+.heads > .week-label {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  text-transform: none;
+}
 
-/* Date + count stick under the header for the length of their week,
-   then the next week's pair pushes up and replaces them */
-.meta-inner {
+.week-label span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--inset);
+  white-space: nowrap;
+  transition: transform var(--dur-2) var(--ease-move);
+}
+
+/* ============================================================
+   BODY — archive column + week bands
+   ============================================================ */
+
+.body {
+  border-bottom: var(--line);
+}
+
+.archive {
+  border-left: var(--line);
+}
+
+.archive ul {
   position: sticky;
   top: var(--head, 148px);
-  padding: var(--unit) var(--inset);
-  font-size: var(--t-s);
-  line-height: 14.4px;
-  color: var(--mid);
+  list-style: none;
 }
 
-.meta .count {
-  margin-top: var(--unit);
-  text-transform: uppercase;
+.archive a {
+  display: flex;
+  align-items: center;
+  height: var(--row);
+  padding: 0 var(--inset);
+  border-bottom: var(--line-soft);
+  font-size: var(--t-m);
+  line-height: 12px;
+  transition: color var(--dur-1);
 }
 
+.archive a:hover { color: var(--mid); }
+
+#weeks { grid-column: 2 / 5; }
+
+.week {
+  scroll-margin-top: var(--head, 148px);
+}
+
+.week + .week { border-top: var(--line); }
+
+/* The oldest week can still scroll up to sit under the header */
+.week:last-child { min-height: calc(100vh - var(--head, 148px)); }
+
+.week-mobile { display: none; }   /* mobile only */
 .strand-label { display: none; }  /* mobile only */
 
 /* ============================================================
@@ -206,26 +254,34 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
-   MOBILE — single column, strands stacked inside each week
+   REDUCED MOTION — jump instead of scroll, swap instead of roll
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .week-label span { transition: none; }
+}
+
+/* ============================================================
+   MOBILE — single column, archive hidden, week date inline
    ============================================================ */
 
 @media (max-width: 860px) {
   :root { --margin: 16px; }
 
-  .grid            { grid-template-columns: 1fr; }
+  .grid, .grid3    { grid-template-columns: 1fr; }
   .cells > *       { border-left: none; border-right: none; }
 
-  .masthead        { height: auto; padding: 20px 0 12px; }
+  .masthead        { height: auto; padding: 20px 0 12px; border-bottom: var(--line); }
   .title,
   .tagline         { padding-left: 0; }
   .tagline         { grid-column: 1; margin-top: 8px; }
 
-  .masthead        { border-bottom: var(--line); }
-  .heads           { display: none; }
+  .heads, .archive { display: none; }
+  #weeks           { grid-column: 1; }
+  .body            { border-bottom: none; }
 
-  .meta-inner      { position: static; display: flex; justify-content: space-between; padding: 7px 0; border-bottom: var(--line); }
-  .meta .count     { margin-top: 0; }
-
+  .week-mobile     { display: block; padding: 7px 0; border-bottom: var(--line); font-size: var(--t-m); line-height: 14.4px; color: var(--mid); }
   .strand-label    { display: block; padding: 14px 0 0; font-size: var(--t-m); line-height: 12px; text-transform: uppercase; }
 
   .block-image,
@@ -242,17 +298,22 @@ a { color: inherit; text-decoration: none; }
   <header class="top">
     <div class="masthead grid">
       <h1 class="title">index.ai</h1>
-      <p class="tagline">A weekly index of AI news<br>Curated for BA Graphic &amp; Media Design</p>
+      <p class="tagline">A weekly index of AI and the creative industries<br>Curated for BA Graphic &amp; Media Design</p>
     </div>
     <div class="heads grid cells">
-      <div></div>
-      <div class="strand-head">The Creative Industry &amp; AI</div>
-      <div class="strand-head">The Environmental Impact of AI</div>
-      <div class="strand-head">The Creative Response to AI</div>
+      <div class="week-label" id="week-label" aria-live="polite"><span>Current week →</span></div>
+      <div>The Creative Industry &amp; AI</div>
+      <div>The Environmental Impact of AI</div>
+      <div>The Creative Response to AI</div>
     </div>
   </header>
 
-  <main id="weeks"></main>
+  <div class="body grid">
+    <nav class="archive" aria-label="Archive">
+      <ul id="archive"></ul>
+    </nav>
+    <main id="weeks"></main>
+  </div>
 
 </div>
 <script>
@@ -293,8 +354,18 @@ async function load() {
     main.innerHTML = '<p class="state-msg">Content unavailable — check back soon.</p>';
     return;
   }
+
+  weeks.forEach((w, i) => {
+    w.id    = 'week-' + isoDate(w.weekOf, i);
+    w.short = formatShort(w.weekOf);
+    w.label = i === 0 ? 'Current week →' : `Week of ${w.short} →`;
+  });
+
+  document.getElementById('archive').innerHTML = weeks.map(w =>
+    `<li><a href="#${w.id}" data-id="${w.id}">Week of ${esc(w.short)}</a></li>`).join('');
   main.innerHTML = weeks.map(renderWeek).join('');
-  setupWeekTracking();
+
+  setupWeeks(weeks);
 }
 
 /* ============================================================
@@ -304,16 +375,9 @@ async function load() {
 function approved(list) { return (list || []).filter(i => i.status === 'approved'); }
 
 function renderWeek(week) {
-  const count = STRANDS.reduce((n, [k]) => n + approved(week[k]).length, 0);
-  const date  = formatDate(week.weekOf);
   return `
-    <section class="week grid cells">
-      <div class="meta">
-        <div class="meta-inner">
-          <div class="date">${esc(date)}</div>
-          <div class="count">${count} ${count === 1 ? 'item' : 'items'}</div>
-        </div>
-      </div>
+    <section class="week grid3 cells" id="${week.id}">
+      <div class="week-mobile">Week of ${esc(week.short)}</div>
       ${STRANDS.map(([k, label]) => `
         <div class="strand">
           <div class="strand-label">${esc(label)}</div>
@@ -338,12 +402,18 @@ function renderBlock(item) {
     </article>`;
 }
 
-/* DD.MM.YYYY */
-function formatDate(value) {
+/* DD.MM.YY */
+function formatShort(value) {
   const d = value ? new Date(value) : null;
   if (!d || isNaN(d)) return '';
   const p = n => String(n).padStart(2, '0');
-  return `${p(d.getDate())}.${p(d.getMonth() + 1)}.${d.getFullYear()}`;
+  return `${p(d.getDate())}.${p(d.getMonth() + 1)}.${String(d.getFullYear()).slice(2)}`;
+}
+
+/* YYYY-MM-DD for ids; falls back to position if the date is missing */
+function isoDate(value, i) {
+  const d = value ? new Date(value) : null;
+  return d && !isNaN(d) ? d.toISOString().slice(0, 10) : 'n' + i;
 }
 
 function esc(s) {
@@ -351,15 +421,79 @@ function esc(s) {
 }
 
 /* ============================================================
-   HEADER HEIGHT — keeps each week's date + count sticking
-   directly under the fixed header
+   WEEKS — tracking, archive clicks, label roll
    ============================================================ */
 
-function setupWeekTracking() {
-  const top = document.querySelector('.top');
-  const set = () => document.documentElement.style.setProperty('--head', top.offsetHeight + 'px');
-  window.addEventListener('resize', set);
-  set();
+function setupWeeks(weeks) {
+  const top      = document.querySelector('.top');
+  const labelBox = document.getElementById('week-label');
+  const sections = weeks.map(w => document.getElementById(w.id));
+  let activeIndex = 0;
+  let locked = false;       // true while an archive click is scrolling the page
+  let ticking = false;
+
+  const headHeight = () => top.offsetHeight;
+  const setHead = () => document.documentElement.style.setProperty('--head', headHeight() + 'px');
+
+  /* Stage: roll — old text leaves, new text arrives along the vertical axis.
+     Moving to an older week (further down) rolls up; newer rolls down. */
+  function roll(toIndex) {
+    if (toIndex === activeIndex) return;
+    const dir  = toIndex > activeIndex ? 1 : -1;
+    const old  = labelBox.querySelector('span:last-child');
+    const next = document.createElement('span');
+    next.textContent = weeks[toIndex].label;
+    next.style.transform = `translateY(${dir * 100}%)`;
+    labelBox.appendChild(next);
+    next.getBoundingClientRect();                 // commit start position
+    next.style.transform = 'translateY(0)';
+    if (old) {
+      old.style.transform = `translateY(${-dir * 100}%)`;
+      const remove = () => old.remove();
+      old.addEventListener('transitionend', remove, { once: true });
+      setTimeout(remove, 600);                    // fallback, e.g. reduced motion
+    }
+    activeIndex = toIndex;
+  }
+
+  /* Stage: track — which week band sits under the fixed header */
+  function track() {
+    ticking = false;
+    if (locked) return;
+    const h = headHeight();
+    let idx = 0;
+    sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= h + 1) idx = i; });
+    roll(idx);
+  }
+
+  /* Stage: select — archive click rolls the label once, then scrolls */
+  document.getElementById('archive').addEventListener('click', e => {
+    const a = e.target.closest('a[data-id]');
+    if (!a) return;
+    e.preventDefault();
+    const idx = weeks.findIndex(w => w.id === a.dataset.id);
+    locked = true;
+    roll(idx);
+    sections[idx].scrollIntoView({ block: 'start' });
+    history.replaceState(null, '', '#' + weeks[idx].id);
+    const unlock = () => { locked = false; };
+    if ('onscrollend' in window) window.addEventListener('scrollend', unlock, { once: true });
+    setTimeout(unlock, 1200);                     // fallback for browsers without scrollend
+  });
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(track); }
+  }, { passive: true });
+  window.addEventListener('resize', () => { setHead(); track(); });
+
+  setHead();
+
+  /* Opened with a week in the address, e.g. …/#week-2026-10-05 */
+  const fromHash = weeks.findIndex(w => '#' + w.id === location.hash);
+  if (fromHash > 0) {
+    sections[fromHash].scrollIntoView({ behavior: 'instant', block: 'start' });
+    roll(fromHash);
+  }
 }
 
 load();
