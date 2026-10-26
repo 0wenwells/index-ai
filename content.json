@@ -1,98 +1,98 @@
 {
-  "lastUpdated": "2026-10-19T09:50:17.989Z",
+  "lastUpdated": "2026-10-26T12:00:56.382Z",
   "a": [
     {
-      "source": "Creative Boom",
-      "headline": "Meet Krea 3: the fast, easy-to-use tool built for editing (not replacing) your work",
-      "summary": "Krea 3 positions itself as an AI editing tool that enhances your existing creative work rather than generating from scratch, which is a meaningful distinction worth examining. As AI tools flood the market, understanding which ones genuinely support designer authorship versus which ones displace it is essential knowledge for working practitioners.",
-      "url": "https://www.creativeboom.com/tools/meet-krea-3-the-fast-affordable-tool-built-for-editing-not-replacing-your-work/",
-      "image": "https://media.creativeboom.com/b2f00b13-a310-4919-a6ac-a50b3638833d/conversions/1e0291ac4fb73732b64c64a3ef7078a700d2c0f4-medium.webp",
-      "date": "19 Oct",
+      "source": "Creative Review",
+      "headline": "How AI has exposed the cracks in the creative industry",
+      "summary": "A new report by MikeTeevee reveals that many anxieties triggered by AI in creative agencies were actually pre-existing structural problems waiting to surface. For design students entering the industry, this is essential reading on how AI is reshaping studio culture, workflows, and creative value.",
+      "url": "https://www.creativereview.co.uk/ai-exposed-cracks-creative-industry-mike-teevee-report/",
+      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/MTV_Brand-Perspectives_cover.png",
+      "date": "22 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Motionographer",
+      "headline": "Sekondo Puts ChatGPT and Claude Inside After Effects and Premiere Pro",
+      "summary": "A new plugin called Sekondo integrates large language models directly into six Adobe applications, including After Effects and Premiere Pro, changing how motion designers can script, edit, and iterate. If you work in motion design, this is a practical look at how AI assistance is embedding itself into the tools you already use.",
+      "url": "https://motionographer.com/news/sekondo-puts-chatgpt-and-claude-inside-after-effects-and-premiere-pro/",
+      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/10/Sekondo_Premiere_Pro.png?fit=700%2C394&quality=80&ssl=1",
+      "date": "20 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "Design Week",
+      "headline": "Oh, Apple Music has a new logo. We talk with Curtis Free about why the making matters more in an AI world.",
+      "summary": "Apple Music has rebranded using a physical process -- sound waves passed through mineral oil -- and Design Week uses this as a launching point to ask why craft and process feel so important to communicate right now. The conversation with Curtis Free is a timely one for designers thinking about how to position handmade process as a value in an AI-saturated landscape.",
+      "url": "https://www.designweek.co.uk/oh-apple-music-has-a-new-logo-we-talk-with-curtis-free-about-why-the-making-matters-more-in-an-ai-world/",
+      "image": "https://d3faj0w6aqatyx.cloudfront.net/uploads/2026/10/videoframe_67233.jpg",
+      "date": "24 Oct",
       "status": "approved"
     },
     {
       "source": "Creative Bloq",
-      "headline": "The Kiwibank sheep went viral for all the wrong reasons, and there is something every brand can learn from it",
-      "summary": "The Kiwibank AI mascot controversy shows how generative tools can undermine brand control when outputs circulate beyond the intended context. For design students working on brand identity, this is a sharp reminder that AI-generated assets carry unpredictable reputational risk.",
-      "url": "https://www.creativebloq.com/news/the-kiwibank-sheep-controversy-suggests-brands-should-give-up-trying-to-control-ai-mascots",
-      "image": "https://cdn.mos.cms.futurecdn.net/QnZ64XSk25kRmz56YoYCeS-1920-80.jpg",
-      "date": "19 Oct",
-      "status": "approved"
-    },
-    {
-      "source": "The Guardian AI",
-      "headline": "Kylie Minogue songs already used to train AI as tech firms strong-arm Australian government, music body warns",
-      "summary": "Music industry bodies are warning that AI companies are lobbying governments to weaken copyright protections, with Australia potentially the only country considering such changes. This has direct implications for designers and illustrators whose visual work faces the same extraction without consent.",
-      "url": "https://www.theguardian.com/music/2026/oct/19/australia-music-global-copywright-outlier-ai-music-body-warnsns",
-      "image": "https://i.guim.co.uk/img/media/240b7746d1549bd30b616b6fd2e698b1838fb964/0_44_6452_5158/master/6452.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "19 Oct",
-      "status": "approved"
-    },
-    {
-      "source": "Creative Bloq",
-      "headline": "This weird legal case could change how we think of copyright forever",
-      "summary": "A copyright case currently working through the courts could fundamentally redefine what counts as authorship and ownership in an era of AI-generated imagery. Design students should follow this closely as the outcome will shape the legal landscape of creative practice for years to come.",
-      "url": "https://www.creativebloq.com/news/this-weird-legal-case-could-change-how-we-think-of-copyright-forever",
-      "image": "https://cdn.mos.cms.futurecdn.net/JoUu8JLXzrgKRoDJU72EME-1920-80.jpg",
-      "date": "18 Oct",
+      "headline": "Just Eat's AI apocalypse raises a glaring question",
+      "summary": "Just Eat has deployed AI-generated content at scale, and the results are prompting serious questions about quality, brand trust, and the role of human creative judgment. This is a useful case study for students thinking about where AI adoption in commercial design risks going wrong.",
+      "url": "https://www.creativebloq.com/news/just-eats-ai-apocalypse-raises-a-pretty-obvious-question",
+      "image": "https://cdn.mos.cms.futurecdn.net/q7XXHzcWFP9uk4mvXKsJk9-1920-80.jpg",
+      "date": "25 Oct",
       "status": "approved"
     }
   ],
   "b": [
     {
+      "source": "MIT Tech Review",
+      "headline": "AI's hidden storage bill: What inference leaves behind",
+      "summary": "Beyond the well-known energy cost of training AI models, this piece exposes the massive and often overlooked storage infrastructure required every time a model is actually used at scale. For designers using generative tools daily, it is a sobering reminder that every prompt carries an invisible environmental price tag.",
+      "url": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/WD-MITTR-Infographic-Final@2x.png",
+      "date": "22 Oct",
+      "status": "approved"
+    },
+    {
       "source": "The Guardian AI",
-      "headline": "Microsoft pulls out of AI datacentre project in Essex over power supply concerns",
-      "summary": "Microsoft has withdrawn from a major UK AI data centre project because the local power grid cannot meet its energy demands, exposing the enormous electricity appetite behind the AI tools designers use daily. This is a concrete illustration of how AI infrastructure competes directly with wider energy systems.",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns",
-      "image": "https://i.guim.co.uk/img/media/48d031cc06f5ca17cafd75b0f30a1537d4f35d43/7_0_686_549/master/686.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "18 Oct",
-      "status": "approved"
-    },
-    {
-      "source": "Wired",
-      "headline": "Data Centers Have a New PR Plan: Your Kid Field Trip",
-      "summary": "Data centre operators are running school outreach programmes to counter growing public backlash about their land, water, and energy use. Recognising how industries manage the optics of environmental harm is useful critical thinking for designers working in sustainability communication.",
-      "url": "https://www.wired.com/story/data-center-industry-is-trying-to-woo-kids/",
-      "image": "https://media.wired.com/photos/6ad250c5e76c5dde4c61ba83/master/pass/101626-Power%20Play.jpg",
-      "date": "18 Oct",
-      "status": "approved"
-    },
-    {
-      "source": "Grist",
-      "headline": "Is coal really making a comeback?",
-      "summary": "Demand for coal is rising again in part because AI data centres are consuming electricity faster than renewable sources can supply it. This piece connects the computational scale of AI directly to fossil fuel dependency, a link that every designer choosing to use generative tools should understand.",
-      "url": "https://grist.org/energy/is-coal-making-comeback-energy-crisis/",
-      "image": "https://grist.org/wp-content/uploads/2026/07/US-tech-coal-power-AI-data-center.jpg?quality=75&strip=all&w=768",
-      "date": "16 Oct",
+      "headline": "Meta announces $95bn fundraising drive to pay for AI expansion",
+      "summary": "Meta is raising nearly $100 billion to fund continued AI infrastructure build-out, signalling the extraordinary scale of capital -- and by extension energy and resources -- being committed to AI expansion globally. Understanding the financial and physical infrastructure behind the tools designers use puts their environmental cost in sharper focus.",
+      "url": "https://www.theguardian.com/business/live/2026/oct/26/ai-cloud-computing-companies-guppy-level-death-elon-musk-stock-markets-dollar-oil-bond-yieds-latest-news-updates",
+      "image": "https://i.guim.co.uk/img/media/394e1b524aec75d1c94ccec789f158228ed79c10/333_0_3333_2667/master/3333.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "26 Oct",
       "status": "approved"
     }
   ],
   "c": [
     {
-      "source": "It's Nice That",
-      "headline": "SourceType Dictionary of the Illegible explores what happens when typography stops making sense",
-      "summary": "Laurenz Brunner examines typeforms that resist readability, from metal band logos to censorship-evading coded scripts, raising sharp questions about legibility, control, and the limits of algorithmic text processing. For visual communication students, this is a critical project about what typography can do that machine learning struggles to parse.",
-      "url": "https://www.itsnicethat.com/features/sourcetype-laurenz-brunner-dictionary-of-the-illegible-graphic-design-publication-spotlight-191026",
-      "image": "",
-      "date": "19 Oct",
+      "source": "Creative Review",
+      "headline": "Inside Robin Hunter Blake's stroboscopic photography",
+      "summary": "Photographer and filmmaker Robin Hunter Blake has built an atmospheric practice rooted in historical stroboscopic techniques, deliberately choosing slow, process-driven methods over digital convenience. His work is a compelling example of how deep engagement with analogue technology can produce images that feel genuinely distinct from AI-generated visual culture.",
+      "url": "https://www.creativereview.co.uk/inside-robin-hunter-blakes-stroboscopic-photograpy/",
+      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/Robin-Hunter-Blake-Spilling-of-the-wine-2026-Courtesy-of-the-Artist.jpg",
+      "date": "23 Oct",
       "status": "approved"
     },
     {
       "source": "Creative Boom",
-      "headline": "Andre Britz draws dimly remembered landscapes, in a book held together with a pink elastic band",
-      "summary": "German graphic designer Andre Britz creates deliberately unfinished drawings of half-remembered places, bound in a lo-fi physical format that resists the polish and resolution of digital production. The project is a quiet argument for memory, imperfection, and the handmade as meaningful creative positions.",
-      "url": "https://www.creativeboom.com/work/andre-britz-draws-landscapes-from-memory-in-a-book-held-together-with-an-elastic-band/",
-      "image": "https://media.creativeboom.com/97695b5a-d8f9-4224-83b0-ceedac6a93dd/conversions/1f7827d403594ffbf80a500f48a656d32a3192dd-medium.webp",
-      "date": "14 Oct",
+      "headline": "Michelle Gruppetta's riso-printed animation reveals what sound sensitivity actually feels like",
+      "summary": "Maltese animator Michelle Gruppetta made her debut short Misophonia by combining risograph printing with animation, using a deliberately labour-intensive and physically grounded process to communicate an experience that defies easy digital rendering. The work is a strong case for how material constraint and slow-tech methods can produce emotional specificity that generative tools struggle to replicate.",
+      "url": "https://www.creativeboom.com/work/michelle-gruppettas-riso-printed-animation-reveals-what-sound-sensitivity-actually-feels-like/",
+      "image": "https://media.creativeboom.com/a7e920a6-c6d9-498f-966b-1bb0127aca1f/conversions/ec3f932298292d30ee78d8cc900f2c9851fbba07-medium.webp",
+      "date": "26 Oct",
       "status": "approved"
     },
     {
-      "source": "Creative Review",
-      "headline": "Wildwood: The Exhibition reveals how Laika builds stop-motion worlds",
-      "summary": "The Laika exhibition at the Design Museum puts handcrafted miniature sets and hand-animated puppets centre stage, making a powerful case for physical fabrication as a distinct and irreplaceable creative discipline. At a moment when AI video generation promises effortless world-building, this exhibition asks what is lost when the hand leaves the process entirely.",
-      "url": "https://www.creativereview.co.uk/wildwood-the-exhibition-design-museum-laika-stop-motion/",
-      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/Laika-Wildwood-exhibition-1.jpg",
-      "date": "15 Oct",
+      "source": "The Guardian AI",
+      "headline": "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models",
+      "summary": "The owners of Elvis Presley's music catalogue are suing Anthropic for allegedly using hundreds of his songs without permission to train Claude, adding to a growing wave of intellectual property litigation targeting AI companies. For design and illustration students, this case is directly relevant to ongoing debates about whether creative work scraped for training data constitutes theft.",
+      "url": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music",
+      "image": "https://i.guim.co.uk/img/media/84aa6ec87e3e6db19123ab53bbb1786594581607/0_358_2832_2265/master/2832.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "25 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "The Guardian AI",
+      "headline": "Dear ChatGPT: 12-year-old wins top youth prize at Australian Poetry Slam",
+      "summary": "A 12-year-old named Blake Mackenzie won a national poetry competition with a piece addressed directly to ChatGPT, using the oldest human expressive form to interrogate the newest machine intelligence. It is a striking reminder that critical engagement with AI does not require a studio or a screen -- sometimes a voice and a stage are enough.",
+      "url": "https://www.theguardian.com/technology/video/2026/oct/26/dear-chatgpt-12-year-old-wins-top-youth-prize-at-australian-poetry-slam-video",
+      "image": "",
+      "date": "26 Oct",
       "status": "approved"
     }
   ]
