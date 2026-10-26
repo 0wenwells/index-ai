@@ -917,7 +917,9 @@ async function publishContent() {
     const data = await res.json();
     if (!res.ok || data.error) throw new Error(data.error || 'Publish failed');
 
-    setStatus('Published. Student page will update within 1–2 minutes.', 'success');
+    setStatus(
+      'Published' + (data.archived ? ' — last week has been moved to the archive' : '') +
+      '. Student page will update within 1–2 minutes.', 'success');
 
   } catch (e) {
     setStatus('Publish failed: ' + e.message, 'error');
