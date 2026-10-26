@@ -254,6 +254,35 @@ body {
 
 .state-msg { font-family: var(--font-mono); font-size: 12px; color: var(--c-mid); padding: 40px 0; letter-spacing: 0.06em; }
 
+/* MOVE BETWEEN COLUMNS */
+.item-move { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-mid); margin-left: 6px; }
+.item-move select, .add-row select {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em;
+  padding: 4px 6px; border: 0.5px solid var(--c-rule); border-radius: 2px;
+  background: white; color: var(--c-ink); cursor: pointer; outline: none;
+}
+.item-move select:focus, .add-row select:focus { border-color: var(--c-ink); }
+.item-flag { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-mid); border: 0.5px solid var(--c-rule); padding: 1px 5px; border-radius: 2px; margin-left: 6px; }
+
+/* ADD ARTICLE */
+.add-bar { padding: 14px 0; border-bottom: 0.5px solid var(--c-rule); }
+.add-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.add-row input[type="url"] {
+  flex: 1 1 320px; font-family: var(--font-mono); font-size: 12px;
+  padding: 8px 10px; border: 0.5px solid var(--c-rule); background: white;
+  color: var(--c-ink); border-radius: 2px; outline: none;
+}
+.add-row input[type="url"]:focus { border-color: var(--c-ink); }
+.add-row select { padding: 8px 6px; }
+.add-manual { margin-top: 12px; padding: 14px; background: white; border: 0.5px solid var(--c-rule); border-radius: 2px; }
+.add-manual[hidden] { display: none; }
+.add-manual p { font-family: var(--font-mono); font-size: 11px; color: var(--c-mid); margin-bottom: 10px; }
+.add-manual input, .add-manual textarea {
+  width: 100%; font-family: var(--font-sans); font-size: 13px; padding: 7px 9px; margin-bottom: 8px;
+  border: 0.5px solid var(--c-rule); background: var(--c-paper); color: var(--c-ink); border-radius: 2px; outline: none;
+}
+.add-manual input:focus, .add-manual textarea:focus { border-color: var(--c-ink); }
+
 /* SETTINGS */
 .settings-section { margin-top: 24px; padding: 20px; border: 0.5px solid var(--c-rule); border-radius: 2px; background: white; }
 .settings-section h2 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-mid); margin-bottom: 14px; }
@@ -304,17 +333,40 @@ body {
     <span id="status-counts"></span>
   </div>
 
+  <!-- ADD AN ARTICLE BY URL -->
+  <section class="add-bar">
+    <div class="add-row">
+      <input type="url" id="add-url" placeholder="Paste an article URL to add it"
+        onkeydown="if(event.key==='Enter') addFromUrl()">
+      <select id="add-strand" aria-label="Column">
+        <option value="a">Creative Industry &amp; AI</option>
+        <option value="b">Environmental Impact of AI</option>
+        <option value="c">Creative Response to AI</option>
+      </select>
+      <button class="btn btn-fetch" id="btn-add" onclick="addFromUrl()">+ Add article</button>
+    </div>
+    <div class="add-manual" id="add-manual" hidden>
+      <p id="add-manual-note">This page couldn't be read automatically. Fill in the details and add it by hand.</p>
+      <input type="text" id="man-source" placeholder="Source, e.g. It's Nice That">
+      <input type="text" id="man-headline" placeholder="Headline">
+      <textarea id="man-summary" rows="3" placeholder="Two-sentence summary for students"></textarea>
+      <input type="url" id="man-image" placeholder="Image URL (optional)">
+      <button class="btn btn-fetch" onclick="addManual()">Add to column</button>
+      <button class="btn btn-undo" onclick="hideManual()" style="margin-left:6px">Cancel</button>
+    </div>
+  </section>
+
   <nav class="strand-nav">
     <button class="strand-tab active" data-strand="a" style="--strand-color: var(--c-strand-a)" onclick="switchTab('a',this)">
-      <span class="dot dot-a"></span>AI &amp; Creative Industry
+      <span class="dot dot-a"></span>Creative Industry &amp; AI
       <span class="tab-count" id="count-a">0</span>
     </button>
     <button class="strand-tab" data-strand="b" style="--strand-color: var(--c-strand-b)" onclick="switchTab('b',this)">
-      <span class="dot dot-b"></span>Environmental Cost
+      <span class="dot dot-b"></span>Environmental Impact of AI
       <span class="tab-count" id="count-b">0</span>
     </button>
     <button class="strand-tab" data-strand="c" style="--strand-color: var(--c-strand-c)" onclick="switchTab('c',this)">
-      <span class="dot dot-c"></span>Creative Opposition
+      <span class="dot dot-c"></span>Creative Response to AI
       <span class="tab-count" id="count-c">0</span>
     </button>
     <button class="strand-tab" data-strand="settings" style="--strand-color: var(--c-mid)" onclick="switchTab('settings',this)">
@@ -331,13 +383,8 @@ body {
 
       <div class="settings-section">
         <h2>Curator Password</h2>
-        <div class="field">
-          <label>Change password</label>
-          <input type="password" id="cfg-new-password" placeholder="New password"
-            style="width:100%;font-family:var(--font-mono);font-size:14px;padding:10px 12px;border:0.5px solid var(--c-rule);background:white;color:var(--c-ink);outline:none;border-radius:2px;">
-          <div class="field-note">Stored in this browser session only.</div>
-        </div>
-        <button class="btn btn-fetch" onclick="changePassword()" style="margin-top:6px">Update password</button>
+        <div class="field-note">The password is the CURATOR_KEY secret in your Cloudflare Worker (Settings → Variables and Secrets). Change it there.</div>
+        <button class="btn btn-undo" onclick="logOut()" style="margin-top:12px">Log out</button>
       </div>
 
       <div class="settings-section" style="margin-top:16px">
@@ -369,40 +416,63 @@ body {
 const WORKER_URL = 'https://signal-proxy.iamowenwells.workers.dev';
 
 // ============================================================
-// DEFAULT PASSWORD
-// ============================================================
-const DEFAULT_PASSWORD = 'index2024';
-
-// ============================================================
 // STATE
 // ============================================================
 let draft = { a: [], b: [], c: [], lastUpdated: null };
-let sessionPassword = null;
 
 // ============================================================
-// LOGIN
+// LOGIN — the password is checked by the Worker, never stored in
+// this file. It is kept for this browser tab only and sent with
+// every Worker request.
 // ============================================================
-function getPassword() {
-  return sessionPassword || DEFAULT_PASSWORD;
+const KEY_STORE = 'indexai_key';
+const getKey = () => { try { return sessionStorage.getItem(KEY_STORE) || ''; } catch { return ''; } };
+
+/* Every call to the Worker goes through here */
+async function api(query, options = {}) {
+  const res = await fetch(`${WORKER_URL}?${query}`, {
+    ...options,
+    headers: { ...(options.headers || {}), 'X-Curator-Key': getKey() }
+  });
+  if (res.status === 401) { logOut('Session expired — enter the password again.'); throw new Error('Not authorised'); }
+  return res;
 }
 
-function doLogin() {
-  const input = document.getElementById('password-input').value;
-  if (input === getPassword()) {
-    document.getElementById('login-screen').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-    loadFeedsUI();
-    loadDraftFromStorage();
-  } else {
-    document.getElementById('login-error').style.display = 'block';
+async function doLogin() {
+  const key   = document.getElementById('password-input').value;
+  const error = document.getElementById('login-error');
+  error.style.display = 'none';
+  try {
+    const res = await fetch(`${WORKER_URL}?action=check`, { headers: { 'X-Curator-Key': key } });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      error.textContent = res.status === 401 ? 'Incorrect password.' : (data.error || 'Login failed.');
+      error.style.display = 'block';
+      return;
+    }
+    try { sessionStorage.setItem(KEY_STORE, key); } catch {}
+    enterApp();
+  } catch {
+    error.textContent = 'Could not reach the Worker.';
+    error.style.display = 'block';
   }
 }
 
-function changePassword() {
-  const np = document.getElementById('cfg-new-password').value.trim();
-  if (!np) return alert('Enter a new password.');
-  sessionPassword = np;
-  alert('Password updated for this session.');
+function enterApp() {
+  document.getElementById('password-input').value = '';
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  loadFeedsUI();
+  loadDraftFromStorage();
+}
+
+function logOut(message) {
+  try { sessionStorage.removeItem(KEY_STORE); } catch {}
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('login-screen').style.display = 'flex';
+  const error = document.getElementById('login-error');
+  error.textContent = typeof message === 'string' ? message : '';
+  error.style.display = typeof message === 'string' ? 'block' : 'none';
 }
 
 // ============================================================
@@ -453,11 +523,11 @@ function renderStrand(strand) {
     <article class="item status-${item.status}" id="item-${strand}-${i}">
       <div class="item-num">0${i+1}</div>
       <div>
-        ${item.image ? `<div class="item-image"><img src="${esc(item.image)}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>` : ''}
-        <div class="item-source">${esc(item.source)}</div>
+        ${safeUrl(item.image) ? `<div class="item-image"><img src="${esc(safeUrl(item.image))}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>` : ''}
+        <div class="item-source">${esc(item.source)}${item.manual ? '<span class="item-flag">Added by hand</span>' : ''}</div>
         <h2 class="item-headline">${esc(item.headline)}</h2>
         <p class="item-summary">${esc(item.summary)}</p>
-        ${item.url ? `<div class="item-url"><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.url)}</a></div>` : ''}
+        ${safeUrl(item.url) ? `<div class="item-url"><a href="${esc(safeUrl(item.url))}" target="_blank" rel="noopener">${esc(item.url)}</a></div>` : ''}
         <div class="item-actions">
           ${item.status === 'pending' ? `
             <button class="btn btn-approve" onclick="setItemStatus('${strand}',${i},'approved')">Approve</button>
@@ -465,6 +535,11 @@ function renderStrand(strand) {
           ` : `
             <button class="btn btn-undo" onclick="setItemStatus('${strand}',${i},'pending')">Undo</button>
           `}
+          <label class="item-move">Column
+            <select onchange="moveItem('${strand}',${i},this.value)">
+              ${STRANDS.map(([k, name]) => `<option value="${k}"${k === strand ? ' selected' : ''}>${name}</option>`).join('')}
+            </select>
+          </label>
         </div>
       </div>
       <div class="item-meta"><div class="item-date">${esc(item.date)}</div></div>
@@ -476,6 +551,123 @@ function setItemStatus(strand, i, status) {
   saveDraftToStorage();
   renderStrand(strand);
   updateCounts();
+}
+
+// ============================================================
+// MOVE — change which column a story sits in
+// ============================================================
+const STRANDS = [
+  ['a', 'Creative Industry &amp; AI'],
+  ['b', 'Environmental Impact of AI'],
+  ['c', 'Creative Response to AI'],
+];
+const strandName = k => (STRANDS.find(s => s[0] === k) || [, k])[1].replace('&amp;', '&');
+
+function moveItem(from, i, to) {
+  if (from === to) return;
+  const [item] = draft[from].splice(i, 1);
+  draft[to] = draft[to] || [];
+  draft[to].push(item);
+  saveDraftToStorage();
+  renderStrand(from);
+  renderStrand(to);
+  setStatus(`Moved “${item.headline}” to ${strandName(to)}.`, 'success');
+}
+
+// ============================================================
+// ADD — one article from a URL, into a chosen column
+// ============================================================
+function findByUrl(u) {
+  for (const s of ['a','b','c']) {
+    if ((draft[s] || []).some(i => i.url === u)) return s;
+  }
+  return null;
+}
+
+function addItem(strand, item) {
+  draft[strand] = draft[strand] || [];
+  draft[strand].unshift({ ...item, status: 'pending', manual: true });
+  saveDraftToStorage();
+  renderAll();
+  switchTab(strand, document.querySelector(`.strand-tab[data-strand="${strand}"]`));
+  document.getElementById('add-url').value = '';
+  hideManual();
+}
+
+async function addFromUrl() {
+  const input  = document.getElementById('add-url');
+  const strand = document.getElementById('add-strand').value;
+  const u      = input.value.trim();
+
+  try { new URL(u); } catch { return setStatus('That doesn’t look like a full URL — include https://', 'error'); }
+
+  const already = findByUrl(u);
+  if (already) return setStatus(`That article is already in ${strandName(already)}.`, 'error');
+
+  const btn = document.getElementById('btn-add');
+  btn.disabled = true;
+  setStatus('Reading the article and writing a summary…', 'loading');
+
+  try {
+    const res  = await api(`action=article&url=${encodeURIComponent(u)}`);
+    const data = await res.json();
+
+    if (data.item && data.item.headline) {
+      addItem(strand, data.item);
+      setStatus(
+        data.warning
+          ? `Added to ${strandName(strand)}, but the summary needs writing: ${data.warning}`
+          : `Added to ${strandName(strand)}. Check the summary, then approve.`,
+        data.warning ? 'error' : 'success'
+      );
+    } else {
+      showManual(data.partial || { url: u }, data.error);
+    }
+  } catch (e) {
+    showManual({ url: u }, e.message);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* Fallback — the page couldn't be read, so fill in the details by hand */
+let manualDraft = null;
+
+function showManual(partial, reason) {
+  manualDraft = partial;
+  document.getElementById('add-manual-note').textContent =
+    `This page couldn’t be read automatically${reason ? ' (' + reason + ')' : ''}. Fill in the details and add it by hand.`;
+  document.getElementById('man-source').value   = partial.source   || '';
+  document.getElementById('man-headline').value = partial.headline || '';
+  document.getElementById('man-summary').value  = partial.summary  || '';
+  document.getElementById('man-image').value    = partial.image    || '';
+  document.getElementById('add-manual').hidden = false;
+  setStatus('Couldn’t read that page — add the details by hand below.', 'error');
+}
+
+function hideManual() {
+  document.getElementById('add-manual').hidden = true;
+  manualDraft = null;
+}
+
+function addManual() {
+  const headline = document.getElementById('man-headline').value.trim();
+  if (!headline) return setStatus('Add at least a headline.', 'error');
+  const strand = document.getElementById('add-strand').value;
+  addItem(strand, {
+    source:   document.getElementById('man-source').value.trim(),
+    headline,
+    summary:  document.getElementById('man-summary').value.trim(),
+    url:      (manualDraft && manualDraft.url) || document.getElementById('add-url').value.trim(),
+    image:    document.getElementById('man-image').value.trim(),
+    date:     (manualDraft && manualDraft.date) || new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }),
+  });
+  setStatus(`Added to ${strandName(strand)}. Approve it to include it when you publish.`, 'success');
+}
+
+/* Only allow ordinary web links — blocks javascript: and similar */
+function safeUrl(u) {
+  try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : ''; } catch { return ''; }
 }
 
 function esc(s) {
@@ -496,7 +688,26 @@ function loadDraftFromStorage() {
       draft = JSON.parse(saved);
       renderAll();
       setStatus('Draft loaded from this session.', '');
+      return;
     }
+  } catch {}
+  loadPublished();
+}
+
+/* No draft in this session — start from what's live, so adding one article
+   mid-week and publishing again keeps the rest of the week in place */
+async function loadPublished() {
+  try {
+    const res = await fetch('content.json?t=' + Date.now());
+    if (!res.ok) return;
+    const live = await res.json();
+    draft = { lastUpdated: live.lastUpdated || null };
+    ['a','b','c'].forEach(s => {
+      draft[s] = (live[s] || []).map(i => ({ ...i, status: i.status || 'approved' }));
+    });
+    saveDraftToStorage();
+    renderAll();
+    setStatus('Loaded the published week. Add or change stories and publish again, or fetch a new week.', '');
   } catch {}
 }
 
@@ -567,7 +778,7 @@ async function fetchNewContent() {
     const feeds   = getFeeds();
     const results = await Promise.allSettled(
       feeds.map(feed =>
-        fetch(`${WORKER_URL}?action=rss&url=${encodeURIComponent(feed.url)}`)
+        api(`action=rss&url=${encodeURIComponent(feed.url)}`)
           .then(r => r.json())
           .then(data => ({ source: feed.source, items: data.items || [] }))
       )
@@ -630,7 +841,7 @@ Respond ONLY with valid JSON, no preamble, no markdown fences. In your summary t
   "c": [...]
 }`;
 
-    const claudeRes = await fetch(`${WORKER_URL}?action=claude`, {
+    const claudeRes = await api('action=claude', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt })
@@ -659,6 +870,12 @@ Respond ONLY with valid JSON, no preamble, no markdown fences. In your summary t
 
     ['a','b','c'].forEach(s => {
       parsed[s] = (parsed[s] || []).map(item => ({ ...item, status: 'pending' }));
+    });
+
+    // Keep any stories added by hand that are still pending, in their columns
+    ['a','b','c'].forEach(s => {
+      const keep = (draft[s] || []).filter(i => i.manual && i.status === 'pending');
+      parsed[s] = [...keep, ...parsed[s].filter(i => !keep.some(k => k.url === i.url))];
     });
 
     parsed.lastUpdated = new Date().toISOString();
@@ -691,7 +908,7 @@ async function publishContent() {
   };
 
   try {
-    const res = await fetch(`${WORKER_URL}?action=publish`, {
+    const res = await api('action=publish', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ content: JSON.stringify(toPublish, null, 2) })
@@ -712,7 +929,8 @@ async function publishContent() {
 // ============================================================
 // INIT
 // ============================================================
-document.getElementById('password-input').focus();
+// Already logged in during this tab? Go straight in.
+if (getKey()) enterApp(); else document.getElementById('password-input').focus();
 </script>
 </body>
 </html>
