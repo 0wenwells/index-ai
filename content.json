@@ -1,99 +1,100 @@
 {
-  "lastUpdated": "2026-10-26T12:01:22.824Z",
+  "lastUpdated": "2026-11-02T10:33:01.910Z",
   "a": [
-    {
-      "source": "Creative Review",
-      "headline": "How AI has exposed the cracks in the creative industry",
-      "summary": "A new report by MikeTeevee reveals that many anxieties triggered by AI in creative agencies were actually pre-existing structural problems waiting to surface. For design students entering the industry, this is essential reading on how AI is reshaping studio culture, workflows, and creative value.",
-      "url": "https://www.creativereview.co.uk/ai-exposed-cracks-creative-industry-mike-teevee-report/",
-      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/MTV_Brand-Perspectives_cover.png",
-      "date": "22 Oct",
-      "status": "approved"
-    },
     {
       "source": "Motionographer",
       "headline": "Sekondo Puts ChatGPT and Claude Inside After Effects and Premiere Pro",
-      "summary": "A new plugin called Sekondo integrates large language models directly into six Adobe applications, including After Effects and Premiere Pro, changing how motion designers can script, edit, and iterate. If you work in motion design, this is a practical look at how AI assistance is embedding itself into the tools you already use.",
+      "summary": "A new plugin called Sekondo embeds large language models directly into six Adobe applications, letting motion designers prompt AI without leaving their editing environment. This is worth watching as a case study in how AI assistance is being woven into the core tools of motion design production.",
       "url": "https://motionographer.com/news/sekondo-puts-chatgpt-and-claude-inside-after-effects-and-premiere-pro/",
-      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/10/Sekondo_Premiere_Pro.png?fit=700%2C394&quality=80&ssl=1",
+      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/10/Sekondo_Premiere_Pro.png?fit=700%2C394&ssl=1",
       "date": "20 Oct",
       "status": "approved"
     },
     {
-      "source": "Design Week",
-      "headline": "Oh, Apple Music has a new logo. We talk with Curtis Free about why the making matters more in an AI world.",
-      "summary": "Apple Music has rebranded using a physical process -- sound waves passed through mineral oil -- and Design Week uses this as a launching point to ask why craft and process feel so important to communicate right now. The conversation with Curtis Free is a timely one for designers thinking about how to position handmade process as a value in an AI-saturated landscape.",
-      "url": "https://www.designweek.co.uk/oh-apple-music-has-a-new-logo-we-talk-with-curtis-free-about-why-the-making-matters-more-in-an-ai-world/",
-      "image": "https://d3faj0w6aqatyx.cloudfront.net/uploads/2026/10/videoframe_67233.jpg",
-      "date": "24 Oct",
-      "status": "approved"
-    },
-    {
-      "source": "Creative Bloq",
-      "headline": "Just Eat's AI apocalypse raises a glaring question",
-      "summary": "Just Eat has deployed AI-generated content at scale, and the results are prompting serious questions about quality, brand trust, and the role of human creative judgment. This is a useful case study for students thinking about where AI adoption in commercial design risks going wrong.",
-      "url": "https://www.creativebloq.com/news/just-eats-ai-apocalypse-raises-a-pretty-obvious-question",
-      "image": "https://cdn.mos.cms.futurecdn.net/q7XXHzcWFP9uk4mvXKsJk9-1920-80.jpg",
-      "date": "25 Oct",
+      "source": "Print Magazine",
+      "headline": "In the Age of AI, Curiosity Is Our Greatest Creative Tool",
+      "summary": "This piece from the DTTO 2026 branding conference argues that curiosity and genuine creative inquiry remain the irreplaceable differentiators for designers working alongside AI tools. It is a useful provocation for students navigating how to maintain a distinct creative voice in an increasingly automated industry.",
+      "url": "https://www.printmag.com/uncategorized/in-the-age-of-ai-curiosity-is-our-greatest-creative-tool/",
+      "image": "https://i0.wp.com/www.printmag.com/wp-content/uploads/2026/10/dtto-2026-branding_55617832606_o-683x1024.jpg?ssl=1",
+      "date": "30 Oct",
       "status": "approved"
     }
   ],
   "b": [
     {
-      "source": "MIT Tech Review",
-      "headline": "AI's hidden storage bill: What inference leaves behind",
-      "summary": "Beyond the well-known energy cost of training AI models, this piece exposes the massive and often overlooked storage infrastructure required every time a model is actually used at scale. For designers using generative tools daily, it is a sobering reminder that every prompt carries an invisible environmental price tag.",
-      "url": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
-      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/WD-MITTR-Infographic-Final@2x.png",
-      "date": "22 Oct",
+      "source": "The Guardian AI",
+      "headline": "National Grid to site biggest substation in UK near planned Teesside datacentre",
+      "summary": "The UK is building its largest ever electricity substation specifically to support a major incoming AI data centre on Teesside, revealing the enormous grid-level infrastructure demands of scaling AI. This is a concrete example of how the hunger for AI compute is reshaping national energy planning in ways that have direct carbon and resource implications.",
+      "url": "https://www.theguardian.com/business/2026/nov/01/national-grid-to-site-biggest-substation-on-teesside-near-planned-ai-datacentre",
+      "image": "https://i.guim.co.uk/img/media/6454f44555fa48a5f38d1d066c370cb6e7376a80/0_0_6827_5464/master/6827.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "1 Nov",
       "status": "approved"
     },
     {
-      "source": "The Guardian AI",
-      "headline": "Meta announces $95bn fundraising drive to pay for AI expansion",
-      "summary": "Meta is raising nearly $100 billion to fund continued AI infrastructure build-out, signalling the extraordinary scale of capital -- and by extension energy and resources -- being committed to AI expansion globally. Understanding the financial and physical infrastructure behind the tools designers use puts their environmental cost in sharper focus.",
-      "url": "https://www.theguardian.com/business/live/2026/oct/26/ai-cloud-computing-companies-guppy-level-death-elon-musk-stock-markets-dollar-oil-bond-yieds-latest-news-updates",
-      "image": "https://i.guim.co.uk/img/media/394e1b524aec75d1c94ccec789f158228ed79c10/333_0_3333_2667/master/3333.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "26 Oct",
+      "source": "MIT Tech Review",
+      "headline": "The agentic web is here",
+      "summary": "MIT Technology Review examines the rise of autonomous AI agents that browse, transact, and act on the web on behalf of users, a shift that dramatically multiplies the compute and energy cycles AI systems consume at scale. As these agents proliferate, the cumulative environmental footprint of even routine digital tasks is set to grow significantly.",
+      "url": "https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/spot1.jpg",
+      "date": "2 Nov",
       "status": "approved"
     }
   ],
   "c": [
     {
-      "source": "Creative Review",
-      "headline": "Inside Robin Hunter Blake's stroboscopic photography",
-      "summary": "Photographer and filmmaker Robin Hunter Blake has built an atmospheric practice rooted in historical stroboscopic techniques, deliberately choosing slow, process-driven methods over digital convenience. His work is a compelling example of how deep engagement with analogue technology can produce images that feel genuinely distinct from AI-generated visual culture.",
-      "url": "https://www.creativereview.co.uk/inside-robin-hunter-blakes-stroboscopic-photograpy/",
-      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/10/Robin-Hunter-Blake-Spilling-of-the-wine-2026-Courtesy-of-the-Artist.jpg",
-      "date": "23 Oct",
+      "source": "The Guardian AI",
+      "headline": "AI is stealing Indigenous Australian art and churning out Temu slop, artist says",
+      "summary": "The chair of the National Gallery of Australia First Nations advisory group has spoken out against AI systems scraping and replicating Indigenous Australian art, describing the output as devaluing both the cultural authenticity and the livelihoods of living artists. This is essential reading for understanding how AI image generation causes direct harm to specific creative communities whose work has particular cultural and spiritual significance.",
+      "url": "https://www.theguardian.com/artanddesign/2026/nov/02/ai-stealing-indigenous-australian-art-temu-slop-artist-says-ntwnfb",
+      "image": "https://i.guim.co.uk/img/media/d42e0956def730a6b1eb335fab858536fb224a9c/224_0_6880_5504/master/6880.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "1 Nov",
+      "status": "approved"
+    },
+    {
+      "source": "The Guardian AI",
+      "headline": "Disquiet grows in Albanese back yard as Grayndler artists unite against insane AI proposal",
+      "summary": "Artists and designers in inner-west Sydney are organising against proposed changes to Australian copyright law that would allow AI companies to train models on creative work without consent or compensation. The campaign is a live example of creative communities mobilising politically against the legal frameworks that enable AI appropriation of their labour.",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/01/artists-against-ai-proposal-anthony-albanese-grayndler-sydney-inner-west",
+      "image": "https://i.guim.co.uk/img/media/807757f27fc7edd5bb144e03b8fbb5e5681bfa56/196_36_2835_2268/master/2835.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "31 Oct",
+      "status": "approved"
+    },
+    {
+      "source": "The Guardian AI",
+      "headline": "Google search has gone from being very handy to useless",
+      "summary": "Guardian cartoonist First Dog on the Moon uses comic illustration to skewer the way AI summaries have degraded Google Search into a tool that actively undermines the open web it was built on. The piece is a sharp example of how satirical visual communication can critique AI product decisions more pointedly than conventional journalism.",
+      "url": "https://www.theguardian.com/commentisfree/picture/2026/nov/02/google-search-has-gone-from-being-very-handy-to-useless",
+      "image": "https://i.guim.co.uk/img/media/8c04dc87e3371640703c26509658a3a6eb37e646/0_59_590_472/master/590.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "2 Nov",
       "status": "approved"
     },
     {
       "source": "Creative Boom",
-      "headline": "Michelle Gruppetta's riso-printed animation reveals what sound sensitivity actually feels like",
-      "summary": "Maltese animator Michelle Gruppetta made her debut short Misophonia by combining risograph printing with animation, using a deliberately labour-intensive and physically grounded process to communicate an experience that defies easy digital rendering. The work is a strong case for how material constraint and slow-tech methods can produce emotional specificity that generative tools struggle to replicate.",
-      "url": "https://www.creativeboom.com/work/michelle-gruppettas-riso-printed-animation-reveals-what-sound-sensitivity-actually-feels-like/",
-      "image": "https://media.creativeboom.com/a7e920a6-c6d9-498f-966b-1bb0127aca1f/conversions/ec3f932298292d30ee78d8cc900f2c9851fbba07-medium.webp",
-      "date": "26 Oct",
+      "headline": "Wildwood: a big leap forward for animation that you need to see on a big screen",
+      "summary": "Laika Studios has released Wildwood, a feature film built entirely on handmade stop-motion craft combined with CG, representing a major creative and commercial bet on physical, labour-intensive animation at a moment when studios are rushing toward AI-generated imagery. The piece makes a passionate case for why tactile, human-made animation carries an emotional register that synthetic tools cannot replicate.",
+      "url": "https://www.creativeboom.com/work/wildwood-is-a-great-leap-forward-for-animation-heres-why-you-need-to-see-it-on-a-big-screen/",
+      "image": "https://media.creativeboom.com/de5b24e0-dff2-4ffa-aecf-a069b40b7ccf/conversions/fa3e1353e64d967f668265b4353713f619627685-medium.webp",
+      "date": "2 Nov",
       "status": "approved"
     },
     {
-      "source": "The Guardian AI",
-      "headline": "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models",
-      "summary": "The owners of Elvis Presley's music catalogue are suing Anthropic for allegedly using hundreds of his songs without permission to train Claude, adding to a growing wave of intellectual property litigation targeting AI companies. For design and illustration students, this case is directly relevant to ongoing debates about whether creative work scraped for training data constitutes theft.",
-      "url": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music",
-      "image": "https://i.guim.co.uk/img/media/84aa6ec87e3e6db19123ab53bbb1786594581607/0_358_2832_2265/master/2832.jpg?width=1200&quality=85&auto=format&fit=max",
-      "date": "25 Oct",
-      "status": "approved"
-    },
-    {
-      "source": "The Guardian AI",
-      "headline": "Dear ChatGPT: 12-year-old wins top youth prize at Australian Poetry Slam",
-      "summary": "A 12-year-old named Blake Mackenzie won a national poetry competition with a piece addressed directly to ChatGPT, using the oldest human expressive form to interrogate the newest machine intelligence. It is a striking reminder that critical engagement with AI does not require a studio or a screen -- sometimes a voice and a stage are enough.",
-      "url": "https://www.theguardian.com/technology/video/2026/oct/26/dear-chatgpt-12-year-old-wins-top-youth-prize-at-australian-poetry-slam-video",
+      "source": "Creative Boom",
+      "headline": "This celebrity ad shows what a difference it makes when you dont use CGI",
+      "summary": "A new financial services campaign shot entirely with practical effects has been praised for its warmth and tactility precisely because audiences are now so saturated with synthetic digital imagery that real physical filmmaking reads as surprising and refreshing. For motion design students, this is a timely reminder that restraint and materiality can be the most powerful creative choice in a CGI-saturated visual landscape.",
+      "url": "https://www.creativeboom.com/work/isobels-financial-services-ad-shows-what-a-difference-it-makes-when-you-dont-use-cgi/",
       "image": "",
-      "date": "26 Oct",
+      "date": "2 Nov",
+      "status": "approved"
+    },
+    {
+      "source": "Design Week",
+      "headline": "Design Week student challenge: bringing human creativity back to summer fetes",
+      "summary": "Following a surge in AI-generated community event posters, Design Week challenged graphic design students to create hand-crafted alternatives, raising important questions about default reliance on generative tools. The results show what intentional human authorship looks like when set directly against algorithmic output.",
+      "url": "https://www.designweek.co.uk/design-weeks-student-challenge-bringing-human-creativity-back-to-summer-fetes/",
+      "image": "https://d3faj0w6aqatyx.cloudfront.net/uploads/2026/10/summer-fete-poster.jpg",
+      "date": "30 Oct",
       "status": "approved"
     }
-  ]
+  ],
+  "weekOf": "2026-11-02"
 }
