@@ -1,5 +1,86 @@
 [
   {
+    "weekOf": "2026-11-09",
+    "a": [
+      {
+        "source": "Creative Review",
+        "headline": "New Edvard Munch exhibition utilises AI and visitor creativity",
+        "summary": "The Munch Museum in Oslo has launched an interactive exhibition using AI to open up its vast archive, letting visitors engage with the work in new ways. This is a useful case study in how cultural institutions are deploying generative tools to bridge heritage collections and contemporary audiences.",
+        "url": "https://www.creativereview.co.uk/new-edvard-munch-exhibition-utilises-ai-and-visitor-creativity/",
+        "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/11/Intercity_MUNCH_Connect-the-Lines_14.jpg",
+        "date": "5 Nov",
+        "status": "approved"
+      },
+      {
+        "source": "Print Magazine",
+        "headline": "In the Age of AI, Curiosity Is Our Greatest Creative Tool",
+        "summary": "This piece argues that curiosity, not technical mastery, is the core skill designers need to navigate an AI-saturated industry. Worth reading as a counterweight to tool-focused AI discourse, it reframes the conversation around creative agency and human-led practice.",
+        "url": "https://www.printmag.com/uncategorized/in-the-age-of-ai-curiosity-is-our-greatest-creative-tool/",
+        "image": "https://i0.wp.com/www.printmag.com/wp-content/uploads/2026/10/dtto-2026-branding_55617832606_o-683x1024.jpg?ssl=1",
+        "date": "30 Oct",
+        "status": "approved"
+      },
+      {
+        "source": "The Guardian AI",
+        "headline": "Weakening AI copyright law will spell disaster for creativity, global music body warns Albanese",
+        "summary": "The head of IFPI is calling out proposed changes to Australian copyright law that would allow AI companies to scrape creative content without consent, warning it sets a dangerous global precedent. As a design student, understanding how copyright frameworks shape who owns trained model outputs is increasingly essential.",
+        "url": "https://www.theguardian.com/technology/2026/nov/09/weakening-ai-copyright-law-will-spell-disaster-for-creativity-australia",
+        "image": "https://i.guim.co.uk/img/media/a9d776b6ee27daeda7be27a2ffc273f39b966850/200_0_6000_4800/master/6000.jpg?width=1200&quality=85&auto=format&fit=max",
+        "date": "8 Nov",
+        "status": "approved"
+      }
+    ],
+    "b": [
+      {
+        "source": "Wired",
+        "headline": "Bikers and Bug-Lovers Join Forces to Fight a New Google Data Center",
+        "summary": "A coalition of environmental activists and local campaigners is mobilising to block a new Google data centre in Europe, the latest flashpoint in a growing wave of community resistance to AI infrastructure expansion. The story puts a human and ecological face on the land, energy, and biodiversity costs of building out AI at scale.",
+        "url": "https://www.wired.com/story/bug-activists-and-biker-gang-members-are-teaming-up-to-protest-data-centers/",
+        "image": "https://media.wired.com/photos/6aecab4af3a6c68d60864f57/master/pass/Bugs%20and%20bikes%20revise.jpg",
+        "date": "9 Nov",
+        "status": "approved"
+      },
+      {
+        "source": "The Guardian AI",
+        "headline": "1-0 to humankind? US midterms vote puts AI, datacentres and the broligarchy back in their box",
+        "summary": "The US midterm results appear to have triggered a political and financial rethink about unchecked AI expansion, with data centre growth and tech billionaire influence both facing new scrutiny. This is a useful piece for situating the environmental cost debate within a broader social and democratic resistance to AI infrastructure.",
+        "url": "https://www.theguardian.com/business/2026/nov/08/us-midterms-ai-datacentres-broligarchy-voter-backlash",
+        "image": "https://i.guim.co.uk/img/media/2ea7dda4257fc43543719a2d375cd85a1ce8cdb4/0_0_7157_5728/master/7157.jpg?width=1200&quality=85&auto=format&fit=max",
+        "date": "8 Nov",
+        "status": "approved"
+      }
+    ],
+    "c": [
+      {
+        "source": "Creative Bloq",
+        "headline": "An anti-AI indie game about keeping hand-drawn fish has become a surprise viral hit",
+        "summary": "A small indie game built entirely around hand-drawn aesthetics and explicitly positioned against AI-generated art has gone viral, suggesting a real audience appetite for work that foregrounds human craft. This is a compelling example of how resistance to AI can itself become a generative creative and commercial proposition.",
+        "url": "https://www.creativebloq.com/news/an-anti-ai-indie-game-about-keeping-hand-drawn-fish-has-become-a-surprise-viral-hit",
+        "image": "https://cdn.mos.cms.futurecdn.net/aGKvf8phsepD9ffykPtJCU-1920-80.jpg",
+        "date": "9 Nov",
+        "status": "approved"
+      },
+      {
+        "source": "Dezeen",
+        "headline": "Playfool Studio spotlights hidden digital labour in data centre cleaning game at the V&A",
+        "summary": "Design studio Playfool has created an installation at the V&A where visitors vacuum digital dust from an overheating server, making visible the invisible physical labour that keeps AI infrastructure running. This is exactly the kind of conceptual design practice that uses participation and humour to interrogate the hidden costs of our digital tools.",
+        "url": "https://www.dezeen.com/2026/11/09/playfool-studio-data-server-cleaning-game-va/",
+        "image": "https://static-2026.dezeen.com/uploads/2026/10/Square-The-Server-Studio-Playfool_dezeen_2364_col_2-1024x1024.jpg",
+        "date": "9 Nov",
+        "status": "approved"
+      },
+      {
+        "source": "The Guardian AI",
+        "headline": "Tom Gauld on prompts for a cartoon about artificial intelligence and writing",
+        "summary": "Cartoonist Tom Gauld turns the prompt interface itself into the subject of satire, using the visual language of AI interaction to critique the flattening of creative writing into instruction sets. It is a sharp, economic piece of graphic commentary that shows how illustration can land a critical argument faster than any essay.",
+        "url": "https://www.theguardian.com/books/picture/2026/nov/08/tom-gauld-on-prompts-for-a-cartoon-about-artificial-intelligence-and-writing-cartoon",
+        "image": "https://i.guim.co.uk/img/media/db9511ca8257705e0818fb86e6f298ac11007026/262_497_1231_985/master/1231.png?width=1200&quality=85&auto=format&fit=max",
+        "date": "8 Nov",
+        "status": "approved"
+      }
+    ]
+  },
+  {
     "weekOf": "2026-11-02",
     "a": [
       {
