@@ -1,73 +1,91 @@
 {
-  "lastUpdated": "2026-11-16T11:25:59.762Z",
+  "lastUpdated": "2026-11-23T10:10:01.410Z",
   "a": [
     {
       "source": "Creative Bloq",
-      "headline": "I trusted Adobe Firefly because it was the safe AI option, now I'm not so sure",
-      "summary": "This piece interrogates the promise of Adobe Firefly as an ethically trained AI tool and raises new doubts about whether that claim holds up. If you use Firefly in your workflow, this is essential reading for understanding the limits of so-called safe generative AI.",
-      "url": "https://www.creativebloq.com/news/i-trusted-adobe-firefly-because-it-was-the-safe-ai-option-now-im-not-so-sure",
-      "image": "https://cdn.mos.cms.futurecdn.net/uUbpTvaqSDLvaVs2dTRkZJ-1920-80.jpg",
-      "date": "15 Nov",
+      "headline": "It's not meant to replace your creativity: Adobe's AI pitch hasn't changed in two years, but the tools have",
+      "summary": "Adobe continues to frame its AI tools as creative assistants rather than replacements, but two years on the actual capabilities have shifted significantly. As a design student, this is a useful reality check on how the industry rhetoric around AI compares to what the tools now actually do in practice.",
+      "url": "https://www.creativebloq.com/features/its-not-meant-to-replace-your-creativity-adobes-ai-pitch-hasnt-changed-in-two-years-but-the-tools-have",
+      "image": "https://cdn.mos.cms.futurecdn.net/uuAGGWst5eFVLY3Lmk8zKT-1920-80.jpg",
+      "date": "22 Nov",
       "status": "approved"
     },
     {
-      "source": "Motionographer",
-      "headline": "Reframe: David Sheldon-Hicks and Art Tindsley open a new podcast with Patrice Vermette",
-      "summary": "Territory Studio founder David Sheldon-Hicks and Pogo launch a new podcast exploring the intersection of creativity and technology, opening with Dune production designer Patrice Vermette. For motion design students, this is a valuable window into how leading studios are navigating creative practice in the age of AI.",
-      "url": "https://motionographer.com/news/reframe-david-sheldon-hicks-and-art-tindsley-open-a-new-podcast-with-patrice-vermette/",
-      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/11/reframe-podcast-landscape.jpg?fit=700%2C394&ssl=1",
-      "date": "12 Nov",
+      "source": "Creative Boom",
+      "headline": "It's official: creatives are using AI daily, but most aren't making extra money from it",
+      "summary": "Envato surveyed over 1,000 creatives and found that daily AI use is now routine across the industry, yet financial gains remain elusive and clients are often kept in the dark. For design students entering the profession, this paints a candid picture of how AI is actually embedded in studio workflows right now.",
+      "url": "https://www.creativeboom.com/insight/its-official-creatives-are-using-ai-daily-but-theyre-not-making-extra-money/",
+      "image": "https://media.creativeboom.com/08df3052-d629-45cc-bde3-eb5ab6471980/conversions/15913ef8205a07a7a15667f248d897d775904c6c-medium.webp",
+      "date": "19 Nov",
       "status": "approved"
     },
     {
-      "source": "Creative Review",
-      "headline": "The Conversation: The state of freelancing",
-      "summary": "As agencies rethink how they hire talent and AI tools reshape production pipelines, this piece examines the shifting landscape for freelance creatives. For students about to enter the industry, understanding these structural changes is as important as building a strong portfolio.",
-      "url": "https://www.creativereview.co.uk/the-conversation-the-state-of-freelancing/",
-      "image": "https://d3e341ktepti6g.cloudfront.net/uploads/2026/11/bbc_square-eyed-boy-hed_0.jpg",
-      "date": "16 Nov",
+      "source": "Creative Bloq",
+      "headline": "GTA 6 is proof that human creativity is still the most impressive technology we have",
+      "summary": "The release of GTA VI has prompted a wider conversation about the irreplaceable value of human craft, from animating a character opening a door with her hip to building an entire fictional city from real cultural references. For motion and game design students, it is a timely argument for the depth that only sustained human creative labour can produce.",
+      "url": "https://www.creativebloq.com/news/gta-6-is-proof-that-human-creativity-is-still-the-most-impressive-technology-we-have",
+      "image": "https://cdn.mos.cms.futurecdn.net/AQZ7LCHB3skKwP5viMdmyi-1920-80.jpg",
+      "date": "22 Nov",
       "status": "approved"
     }
   ],
   "b": [
     {
-      "source": "MIT Tech Review",
-      "headline": "The Download: Pelosi's successor targets AI and data centers face power woes",
-      "summary": "This edition of MIT Tech Review's daily newsletter covers growing political and infrastructural pressure on data centres as their power demands escalate. It is a timely reminder that every AI tool you use in a studio is tethered to an energy grid under increasing strain.",
-      "url": "https://www.technologyreview.com/2026/11/10/1148150/the-download-pelosi-successor-ai-regulation-data-center-backlash/",
-      "image": "https://wp.technologyreview.com/wp-content/uploads/2024/12/GettyImages-1252251768-SA.jpg?fit=1920,1280",
-      "date": "10 Nov",
+      "source": "Grist",
+      "headline": "Data centers' electricity use is soaring — especially in these states",
+      "summary": "A new analysis reveals that data centres now consume around 2 percent of all US electricity, with some states carrying a far heavier burden as AI infrastructure scales rapidly. The piece puts hard numbers on the energy cost of the AI tools design students use every day, making the abstract environmental argument concrete.",
+      "url": "https://grist.org/energy/data-centers-use-2-of-us-electricity-in-some-states-the-share-is-far-higher/",
+      "image": "https://grist.org/wp-content/uploads/2026/11/dc-state-share-apple-news.png",
+      "date": "20 Nov",
+      "status": "approved"
+    },
+    {
+      "source": "Grist",
+      "headline": "Even the good guys of AI are locking in fossil fuels",
+      "summary": "Anthropic, widely regarded as one of the more ethically minded AI companies, has been found to be deepening reliance on fossil fuel energy sources as it scales its infrastructure following a 1.5 trillion dollar valuation. This is essential reading for design students who want to understand the environmental contradictions embedded in the generative tools they use.",
+      "url": "https://grist.org/accountability/anthropic-alignment-ai-fossil-fuels-climate-change/",
+      "image": "https://grist.org/wp-content/uploads/2026/11/Gas-plant-ohio.jpg?quality=75&strip=all&w=768",
+      "date": "19 Nov",
+      "status": "approved"
+    },
+    {
+      "source": "The Guardian AI",
+      "headline": "Datacentre bosses met Australian state premiers and ministers almost 120 times in three years, analysis finds",
+      "summary": "An investigation has found that data centre executives have had extensive and largely opaque access to senior government figures as AI infrastructure expansion accelerates across Australia. It reveals the political lobbying machinery behind decisions about where energy-hungry AI facilities get built and who bears the cost.",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/23/datacentre-bosses-met-australian-state-premiers-and-ministers-almost-120-times-in-three-years-analysis-finds",
+      "image": "https://i.guim.co.uk/img/media/7c9ca8255b51e9604fa64118322f08bb4d19c764/475_0_3640_2912/master/3640.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "22 Nov",
       "status": "approved"
     }
   ],
   "c": [
     {
-      "source": "Creative Boom",
-      "headline": "Max Cameron roasts the arrogance of AI tech bros with subversive cigarette packaging",
-      "summary": "Senior Mother London copywriter Max Cameron has designed a series of fake cigarette packs that mirror the health warnings on tobacco packaging, applying them directly to the wilder claims of AI hype. It is a razor-sharp piece of critical design that uses familiar visual language to puncture Silicon Valley hubris.",
-      "url": "https://www.creativeboom.com/news/max-cameron-roasts-the-arrogance-of-ai-tech-bros-with-subversive-cigarette-packaging/",
-      "image": "https://media.creativeboom.com/a2668030-f2ab-449e-8690-5b7ffe96e46c/conversions/83532b022568b4eba106da0aa7d05a2a90a085f3-medium.webp",
+      "source": "The Guardian AI",
+      "headline": "Dapper Liam and Noel, experimental Björk, and Bowie cuddling himself: Rankin reveals his never-before-seen shots of the stars",
+      "summary": "Renowned photographer Rankin describes his experiments with AI as producing results he found disgusting, and has returned emphatically to analogue photographic practice with a new book of contact sheets. His public rejection of AI aesthetics in favour of the unmediated energy of film is a compelling statement from one of the industry's most prominent image-makers.",
+      "url": "https://www.theguardian.com/artanddesign/2026/nov/23/rankin-photographer-interview-contact-david-bowie-oasis",
+      "image": "https://i.guim.co.uk/img/media/0ea2ef6c794663a88261eeaa216cc1c9f547aa65/154_3_2211_1768/master/2211.jpg?width=1200&quality=85&auto=format&fit=max",
+      "date": "23 Nov",
+      "status": "approved"
+    },
+    {
+      "source": "Motionographer",
+      "headline": "The Long Way to I Do: A Porsche Love Story, Hand-Painted Frame by Frame",
+      "summary": "Director Em Cooper hand-painted every frame of a film for Porsche, transforming a documentary subject into a moving oil painting through entirely manual means. At a moment when AI-generated animation is proliferating, this project is a deliberate and powerful argument for the expressive weight of slow, embodied craft.",
+      "url": "https://motionographer.com/news/porsche-the-long-way-to-i-do-em-cooper-tonic-dna/",
+      "image": "https://i0.wp.com/motionographer.com/wp-content/uploads/2026/11/porsche-the-long-way-to-i-do-film-still.png?fit=700%2C392&ssl=1",
+      "date": "19 Nov",
+      "status": "approved"
+    },
+    {
+      "source": "Print Magazine",
+      "headline": "The Daily Heller: What is Portraiture in Digital Space?",
+      "summary": "Steven Heller examines a body of work called Enter The Machine that expands portraiture to encompass digital entities such as files, folders, and programmes, raising urgent questions about identity, representation, and what it means to depict a subject in an age of algorithmic image-making. For visual communication students, it opens a productive critical space between traditional portraiture and the new ontology of machine-generated likenesses.",
+      "url": "https://www.printmag.com/daily-heller/the-daily-heller-what-is-portraiture-digital/",
+      "image": "https://i0.wp.com/www.printmag.com/wp-content/uploads/2026/11/snowden-archive.gif?resize=1000%2C1000&ssl=1",
       "date": "16 Nov",
-      "status": "approved"
-    },
-    {
-      "source": "Wired",
-      "headline": "AI DJs Completely Kill My Groove",
-      "summary": "This essay critically examines how YouTube Music and Spotify have deployed synthetic AI hosts to curate playlists, arguing that their hollow banter and fabricated trivia actively degrade the listening experience. It raises important questions about what is lost when human curation and taste are replaced by generative performance.",
-      "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
-      "image": "https://media.wired.com/photos/6af7840bd2837972f5ddf4f3/master/pass/Untitled-1.jpg",
-      "date": "15 Nov",
-      "status": "approved"
-    },
-    {
-      "source": "It's Nice That",
-      "headline": "Georgie McAusland on refusing expensive tools to get more squish and texture into her drawings",
-      "summary": "Illustrator Georgie McAusland deliberately avoids expensive digital tools, instead drawing on location to capture the textures and atmosphere that software tends to flatten. Her practice is a quiet but clear statement about the value of physical presence and material resistance in image-making.",
-      "url": "https://www.itsnicethat.com/articles/georgie-mcausland-illustration-discover-121126",
-      "image": "",
-      "date": "12 Nov",
       "status": "approved"
     }
   ],
-  "weekOf": "2026-11-16"
+  "weekOf": "2026-11-23"
 }
