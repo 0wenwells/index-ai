@@ -43,6 +43,7 @@
   --row:       30px;      /* header row + archive rows — five half-units of 6 */
   --inset:     12px;      /* text indent from column rule */
   --inset-r:   36px;      /* right indent on small text */
+  --gutter:    24px;      /* gap between archive column and the three main columns */
   --unit:      12px;      /* vertical rhythm */
   --max:       1200px;
 
@@ -116,9 +117,15 @@ a { color: inherit; text-decoration: none; }
 
 .heads {
   height: var(--row);
+}
+
+/* Rules sit on the cells, so the archive cell can stop short of the main columns */
+.heads > div {
   border-top: var(--line);
   border-bottom: var(--line);
 }
+
+.heads > :first-child { margin-right: var(--gutter); }
 
 .heads > div {
   display: flex;
@@ -155,12 +162,13 @@ a { color: inherit; text-decoration: none; }
    BODY — archive column + week bands
    ============================================================ */
 
-.body {
+#weeks {
   border-bottom: var(--line);
 }
 
 .archive {
   border-left: none;
+  padding-right: var(--gutter);
 }
 
 .archive ul {
@@ -280,7 +288,7 @@ a { color: inherit; text-decoration: none; }
 
   .heads, .archive { display: none; }
   #weeks           { grid-column: 1; }
-  .body            { border-bottom: none; }
+  #weeks           { border-bottom: none; }
 
   .week-mobile     { display: block; padding: 7px 0; border-bottom: var(--line); font-size: var(--t-m); line-height: 14.4px; color: var(--mid); }
   .strand-label    { display: block; padding: 14px 0 0; font-size: var(--t-m); line-height: 12px; }
