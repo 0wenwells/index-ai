@@ -92,7 +92,10 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--bg);
+  /* Frosted overlay: stories and archive rows that pass under it blur and fade */
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .masthead {
@@ -119,10 +122,12 @@ a { color: inherit; text-decoration: none; }
   height: var(--row);
 }
 
-/* Rules sit on the cells, so the archive cell can stop short of the main columns */
+/* Rules sit on the cells, so the archive cell can stop short of the main columns.
+   The header row itself is solid: only the masthead above it is frosted. */
 .heads > div {
   border-top: var(--line);
   border-bottom: var(--line);
+  background: var(--bg);
 }
 
 .heads > :first-child { margin-right: var(--gutter); }
@@ -175,6 +180,8 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: var(--head, 148px);
   list-style: none;
+  will-change: transform;   /* moved by the slide stage, one row per week */
+  transition: transform var(--dur-2) var(--ease-move);   /* same timing as the label roll */
 }
 
 .archive a {
@@ -268,7 +275,8 @@ a { color: inherit; text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .week-label span { transition: none; }
+  .week-label span,
+  .archive ul      { transition: none; }
 }
 
 /* ============================================================
@@ -482,6 +490,16 @@ function setupWeeks(weeks) {
     activeIndex = toIndex;
   }
 
+  /* Stage: slide — the archive column steps one row per week, in time with
+     the label roll. The row for the week in view sits exactly behind the solid
+     label cell, so its name only ever shows once; newer weeks sit above, under
+     the frosted masthead; older weeks follow below. */
+  const list = document.getElementById('archive');
+  function slide(idx) {
+    const row = list.firstElementChild ? list.firstElementChild.offsetHeight : 0;
+    list.style.transform = `translateY(${-(idx + 1) * row}px)`;
+  }
+
   /* Stage: track — which week band sits under the fixed header */
   function track() {
     ticking = false;
@@ -489,6 +507,7 @@ function setupWeeks(weeks) {
     const h = headHeight();
     let idx = 0;
     sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= h + 1) idx = i; });
+    slide(idx);
     roll(idx);
   }
 
@@ -499,6 +518,7 @@ function setupWeeks(weeks) {
     e.preventDefault();
     const idx = weeks.findIndex(w => w.id === a.dataset.id);
     locked = true;
+    slide(idx);
     roll(idx);
     sections[idx].scrollIntoView({ block: 'start' });
     history.replaceState(null, '', '#' + weeks[idx].id);
@@ -513,12 +533,14 @@ function setupWeeks(weeks) {
   window.addEventListener('resize', () => { setHead(); track(); });
 
   setHead();
+  track();
 
   /* Opened with a week in the address, e.g. …/#week-2026-10-05 */
   const fromHash = weeks.findIndex(w => '#' + w.id === location.hash);
   if (fromHash > 0) {
     sections[fromHash].scrollIntoView({ behavior: 'instant', block: 'start' });
     roll(fromHash);
+    track();
   }
 }
 
