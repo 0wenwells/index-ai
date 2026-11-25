@@ -98,6 +98,12 @@ a { color: inherit; text-decoration: none; }
   background: color-mix(in srgb, var(--bg) 88%, transparent);
 }
 
+/* Reading the archive: the title and tagline slide up out of the masthead;
+   the masthead band, its veil and the header row stay where they are */
+.title, .tagline { transition: transform var(--dur-2) var(--ease-move), opacity var(--dur-2) var(--ease-move); }
+.top.compact .title,
+.top.compact .tagline { transform: translateY(calc(-1 * var(--margin) - 30px)); opacity: 0; }
+
 .masthead {
   height: 113px;
   padding-top: var(--margin);
@@ -281,7 +287,9 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .week-label span,
-  .archive ul      { transition: none; }
+  .archive ul,
+  .title,
+  .tagline         { transition: none; }
 }
 
 /* ============================================================
@@ -473,6 +481,8 @@ function setupWeeks(weeks) {
 
   const headHeight = () => top.offsetHeight;
   const setHead = () => document.documentElement.style.setProperty('--head', headHeight() + 'px');
+  /* Stage: compact — title and tagline away while reading older weeks, back on this week */
+  function compact(idx) { top.classList.toggle('compact', idx > 0); }
 
   /* Stage: roll — old text leaves, new text arrives along the vertical axis.
      Moving to an older week (further down) rolls up; newer rolls down. */
@@ -514,6 +524,7 @@ function setupWeeks(weeks) {
     let idx = 0;
     sections.forEach((s, i) => { if (s.getBoundingClientRect().top <= h + 1) idx = i; });
     slide(idx);
+    compact(idx);
     roll(idx);
   }
 
@@ -525,6 +536,7 @@ function setupWeeks(weeks) {
     const idx = weeks.findIndex(w => w.id === a.dataset.id);
     locked = true;
     slide(idx);
+    compact(idx);
     roll(idx);
     sections[idx].scrollIntoView({ block: 'start' });
     history.replaceState(null, '', '#' + weeks[idx].id);
