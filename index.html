@@ -80,6 +80,8 @@ a { color: inherit; text-decoration: none; }
 /* Every cell carries a left rule; the last one closes the right edge */
 .cells > * { border-left: var(--line); }
 .cells > :last-child { border-right: var(--line); }
+/* The archive column is open on its left edge */
+.heads > :first-child { border-left: none; }
 
 /* ============================================================
    FIXED TOP — masthead + header row stay put
@@ -158,7 +160,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .archive {
-  border-left: var(--line);
+  border-left: none;
 }
 
 .archive ul {
