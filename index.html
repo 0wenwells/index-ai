@@ -301,7 +301,7 @@ a { color: inherit; text-decoration: none; }
       <p class="tagline">A weekly index of AI news<br>Curated for BA Graphic &amp; Media Design</p>
     </div>
     <div class="heads grid cells">
-      <div class="week-label" id="week-label" aria-live="polite"><span>Current week →</span></div>
+      <div class="week-label" id="week-label" aria-live="polite"><span>This week →</span></div>
       <div>The Creative Industry &amp; AI</div>
       <div>The Environmental Impact of AI</div>
       <div>The Creative Response to AI</div>
@@ -358,11 +358,12 @@ async function load() {
   weeks.forEach((w, i) => {
     w.id    = 'week-' + isoDate(w.weekOf, i);
     w.short = formatShort(w.weekOf);
-    w.label = i === 0 ? 'Current week →' : `Week of ${w.short} →`;
+    w.rel   = weeksAgo(w.weekOf, i);
+    w.label = `${w.rel} →`;
   });
 
   document.getElementById('archive').innerHTML = weeks.map(w =>
-    `<li><a href="#${w.id}" data-id="${w.id}">Week of ${esc(w.short)}</a></li>`).join('');
+    `<li><a href="#${w.id}" data-id="${w.id}" title="Week of ${esc(w.short)}">${esc(w.rel)}</a></li>`).join('');
   main.innerHTML = weeks.map(renderWeek).join('');
 
   setupWeeks(weeks);
@@ -377,7 +378,7 @@ function approved(list) { return (list || []).filter(i => i.status === 'approved
 function renderWeek(week) {
   return `
     <section class="week grid3 cells" id="${week.id}">
-      <div class="week-mobile">Week of ${esc(week.short)}</div>
+      <div class="week-mobile">${esc(week.rel)}</div>
       ${STRANDS.map(([k, label]) => `
         <div class="strand">
           <div class="strand-label">${esc(label)}</div>
@@ -410,6 +411,15 @@ function formatShort(value) {
   if (!d || isNaN(d)) return '';
   const p = n => String(n).padStart(2, '0');
   return `${p(d.getDate())}.${p(d.getMonth() + 1)}.${String(d.getFullYear()).slice(2)}`;
+}
+
+/* Relative label, counted in whole weeks from this week's Monday:
+   This week / Last week / 2 weeks ago … Falls back to position. */
+function weeksAgo(value, i) {
+  const monday = d => { const m = new Date(d.getFullYear(), d.getMonth(), d.getDate()); m.setDate(m.getDate() - (m.getDay() + 6) % 7); return m; };
+  const d = value ? new Date(value) : null;
+  const n = d && !isNaN(d) ? Math.max(0, Math.round((monday(new Date()) - monday(d)) / 6048e5)) : i;
+  return n === 0 ? 'This week' : n === 1 ? 'Last week' : `${n} weeks ago`;
 }
 
 /* YYYY-MM-DD for ids; falls back to position if the date is missing */
