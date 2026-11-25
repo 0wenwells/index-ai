@@ -92,10 +92,10 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 10;
-  /* Frosted overlay: stories and archive rows that pass under it blur and fade */
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  /* Veil: stories and archive rows that pass under it stay sharp but drop to a
+     faint, even ghost (about 12% strength). No blur: a blurred smudge reads as a
+     rendering fault, a crisp ghost reads as a layer. */
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
 }
 
 .masthead {
