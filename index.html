@@ -198,6 +198,10 @@ a { color: inherit; text-decoration: none; }
 
 .archive a:hover { color: var(--fg); }
 
+/* Rows for newer weeks sit under the masthead veil. Set in full ink, so they
+   ghost at the same strength as the stories passing under it. */
+.archive li.above a { color: var(--fg); }
+
 #weeks { grid-column: 2 / 5; }
 
 .week {
@@ -499,6 +503,7 @@ function setupWeeks(weeks) {
   function slide(idx) {
     const row = list.firstElementChild ? list.firstElementChild.offsetHeight : 0;
     list.style.transform = `translateY(${-(idx + 1) * row}px)`;
+    [...list.children].forEach((li, i) => li.classList.toggle('above', i < idx));
   }
 
   /* Stage: track — which week band sits under the fixed header */
